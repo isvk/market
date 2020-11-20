@@ -6,6 +6,7 @@ import { loadProducts } from "src/store/products/actions";
 import { loadStatus } from "src/store/loadStatus";
 import Alert from "src/components/Alert/Alert";
 import { mainGetStatusLoadingProducts } from "src/store/rootSelector";
+import ListProducts from "src/components/ListProducts/ListProducts";
 
 export default function MainPage() {
     const status = useCustomSelector(mainGetStatusLoadingProducts);
@@ -20,7 +21,11 @@ export default function MainPage() {
         <Wrapper>
             {status === loadStatus.notLoaded && <Alert type="preload" text="Загрузка..." />}
             {status === loadStatus.errorServer && <Alert type="warning" text="Ошибка сервера" />}
-            {status === loadStatus.loaded && <></>}
+            {status === loadStatus.loaded && (
+                <>
+                    <ListProducts />
+                </>
+            )}
         </Wrapper>
     );
 }
