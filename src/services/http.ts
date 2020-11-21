@@ -1,5 +1,5 @@
 import { IHttp } from "./IHttp";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { mock } from "./mock";
 
 mock(axios);
@@ -22,8 +22,8 @@ export default class Http implements IHttp {
     };
 
     request = (method: "GET" | "POST" | "PUT" | "DELETE" = "GET", url: string, data = {}) => {
-        return axios({ method: method, url: "/api" + url }).then(function (response) {
-            return response.data;
-        });
+        return axios({ method: method, url: "/api" + url, data: data }).then(
+            (response: AxiosResponse) => response.data
+        );
     };
 }
