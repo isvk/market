@@ -8,7 +8,7 @@ export type TStoreMain = Main;
 const reducer = (state: TStoreMain = new Main(), action: ActionTypesInfer<typeof actions>) => {
     switch (action.type) {
         case types.UPDATE_STATUS_LOADING_PRODUCTS:
-            return { ...state, statusLoadingProducts: action.status };
+            return state.set("statusLoadingProducts", action.status);
 
         default:
             return state;
