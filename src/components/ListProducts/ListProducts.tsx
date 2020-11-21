@@ -1,15 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { productState } from "src/store/rootSelector";
-import useCustomSelector from "src/hooks/useCustomSelector";
 import Product from "./Product/Product";
+import { TStoreProduct } from "src/store/products/reducer";
 
-export default function ListProducts() {
-    const products = useCustomSelector(productState);
+interface IListProductsProps {
+    products: TStoreProduct;
+}
 
+export default function ListProducts(props: IListProductsProps) {
     return (
         <Wrapper>
-            {products.map((product) => (
+            {props.products.valueSeq().map((product) => (
                 <Product product={product} key={product.id} />
             ))}
         </Wrapper>

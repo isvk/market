@@ -1,38 +1,23 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import useCustomDispatch from "src/hooks/useCustomDispatch";
 import useCustomSelector from "src/hooks/useCustomSelector";
-import { loadProducts } from "src/store/products/actions";
+import { mainGetStatusLoadingProducts, productState } from "src/store/rootSelector";
 import { loadStatus } from "src/store/loadStatus";
+import LoadProducts from "./LoadProducts";
 import Alert from "src/components/Alert/Alert";
-import { mainGetStatusLoadingProducts } from "src/store/rootSelector";
 import ListProducts from "src/components/ListProducts/ListProducts";
 
 export default function MainPage() {
     const status = useCustomSelector(mainGetStatusLoadingProducts);
-    const dispatch = useCustomDispatch();
-
-    useEffect(() => {
-        dispatch(loadProducts());
-        // eslint-disable-next-line
-    }, []);
+    const products = useCustomSelector(productState);
 
     return (
         <Wrapper>
-            {status === loadStatus.notLoaded && <Alert type="preload" text="Загрузка..." />}
+            {status === loadStatus.notLoaded && <LoadProducts />}
             {status === loadStatus.errorServer && <Alert type="warning" text="Ошибка сервера" />}
-            {status === loadStatus.loaded && (
-                <>
-                    <ListProducts />
-                </>
-            )}
+            {status === loadStatus.loaded && <ListProducts products={products} />}
         </Wrapper>
     );
 }
 
-const Wrapper = styled.div`
-    max-width: 935px;
-    margin: 0 auto;
-    font-size: 16px;
-    background-color: #fafafa;
-`;
+const Wrapper = styled.div``;
