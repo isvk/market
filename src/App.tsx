@@ -1,13 +1,28 @@
 import React from "react";
+import styled from "styled-components";
+import { Switch, Route, Redirect } from "react-router-dom";
 import MainPage from "./components/MainPage/MainPage";
-import { Switch, Route } from "react-router-dom";
+import CreateProductPage from "./components/ProductPage/CreateProductPage";
 
 function App() {
     return (
-        <Switch>
-            <Route exact path="/" component={MainPage} />
-        </Switch>
+        <Wrapper>
+            <Switch>
+                <Route exact path="/">
+                    <Redirect to="/products" />
+                </Route>
+                <Route exact path="/products" component={MainPage} />
+                <Route exact path="/products/create" component={CreateProductPage} />
+            </Switch>
+        </Wrapper>
     );
 }
+
+const Wrapper = styled.div`
+    max-width: 935px;
+    margin: 0 auto;
+    font-size: 16px;
+    background-color: #fafafa;
+`;
 
 export default App;

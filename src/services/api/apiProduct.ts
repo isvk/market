@@ -15,4 +15,8 @@ export default class ApiProduct {
             .get(this.url + "/")
             .then((response) => response.map((apiProduct: IApiProduct) => new Product(apiProduct)));
     };
+
+    create = (product: Product) => {
+        return this.http.put(this.url + "/", product.toJSON()).then((response) => new Product(response));
+    };
 }
