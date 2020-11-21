@@ -18,6 +18,7 @@ const reducer = (state: TStoreProduct = Map(), action: ActionTypesInfer<typeof a
             return state;
 
         case types.CREATE_PRODUCT_SUCCESS:
+        case types.UPDATE_PRODUCT_SUCCESS:
             return state.set(action.product.id, action.product);
 
         default:

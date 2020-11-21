@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import ProductModel from "src/models/product";
 
 interface IProductProps {
@@ -9,6 +10,7 @@ interface IProductProps {
 export default function Product(props: IProductProps) {
     return (
         <Wrapper>
+            <Link to={"/products/" + props.product.id}>Редактировать товар</Link>
             <Name>{props.product.name}</Name>
             <Description>{props.product.description}</Description>
         </Wrapper>

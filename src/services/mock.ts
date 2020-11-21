@@ -25,8 +25,23 @@ export function mock(axios: any) {
         const product = { ...JSON.parse(config.data), id: Date.now().toString() };
         products.push(product);
 
+        mock.onPost("/api/products/" + product.id).reply((config) => {
+            return [200, JSON.parse(config.data)];
+        });
+
         return [200, product];
     });
 
+    //read
+    products.forEach((product) => {
+        mock.onGet("/api/products/" + product.id).reply(200, product);
+    });
+
+    //update
+    products.forEach((product) => {
+        mock.onPost("/api/products/" + product.id).reply((config) => {
+            return [200, JSON.parse(config.data)];
+        });
+    });
     /* End Products */
 }

@@ -19,4 +19,12 @@ export default class ApiProduct {
     create = (product: Product) => {
         return this.http.put(this.url + "/", product.toJSON()).then((response) => new Product(response));
     };
+
+    read = (id: Product["id"]) => {
+        return this.http.get(this.url + "/" + id).then((response) => new Product(response));
+    };
+
+    update = (id: Product["id"], product: Product) => {
+        return this.http.post(this.url + "/" + id, product.toJSON()).then((response) => new Product(response));
+    };
 }

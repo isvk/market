@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import useCustomDispatch from "src/hooks/useCustomDispatch";
 import ProductModel from "src/models/product";
-import { createProduct } from "src/store/products/actions";
+import { createProduct, updateProduct } from "src/store/products/actions";
 import { Link } from "react-router-dom";
 
 interface IProductFormProps {
     product: ProductModel;
+    typeForm: "create" | "edit";
 }
 
 export default function FormProduct(props: IProductFormProps) {
@@ -13,12 +14,13 @@ export default function FormProduct(props: IProductFormProps) {
 
     const [product, setProduct] = useState(props.product);
 
-    const handleSave = () => dispatch(createProduct(product));
+    const handleSave = () =>
+        dispatch(props.typeForm === "create" ? createProduct(product) : updateProduct(product.id, product));
 
     return (
         <>
             <Link to={"/products"}>К списку товаров</Link>
-            <h1>Создать товар</h1>
+            <h1>{props.typeForm === "create" ? "Создание товара" : "Редактирование товара"}</h1>
             <div>
                 <div>Название:</div>
                 <div>
@@ -35,7 +37,9 @@ export default function FormProduct(props: IProductFormProps) {
                 </div>
             </div>
             <div>
-                <button onClick={handleSave}>Создать товар</button>
+                <button onClick={handleSave}>
+                    {props.typeForm === "create" ? "Создать товар" : "Сохранить товар"}
+                </button>
             </div>
         </>
     );
