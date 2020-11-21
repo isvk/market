@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import Product from "./Product/Product";
 import { TStoreProduct } from "src/store/products/reducer";
 
@@ -10,6 +11,7 @@ interface IListProductsProps {
 export default function ListProducts(props: IListProductsProps) {
     return (
         <Wrapper>
+            <Link to="/products/create">Создать товар</Link>
             {props.products.valueSeq().map((product) => (
                 <Product product={product} key={product.id} />
             ))}
