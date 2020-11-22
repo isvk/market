@@ -1,0 +1,2 @@
+export const ADD_PARAMETERS = "ADD_PARAMETERS";
+export const LOAD_PARAMETERS = "LOAD_PARAMETERS";

@@ -5,6 +5,7 @@ export interface IApiProduct {
     id: string;
     name: string;
     description: string;
+    parameters: { [key: string]: string };
 }
 
 export default class ApiProduct {

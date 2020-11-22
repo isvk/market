@@ -9,11 +9,19 @@ export function mock(axios: any) {
             id: "7df78ad8902c6313",
             name: "Apple iPhone SE 2",
             description: "Текстовое описание для Apple iPhone SE 2",
+            parameters: {
+                manufacturer: "Apple",
+                model: "iPhone SE 2",
+            },
         },
         {
             id: "5879b0f65a56a454",
             name: "SAMSUNG Galaxy S20",
             description: "Текстовое описание для Samsung Galaxy S20",
+            parameters: {
+                manufacturer: "SAMSUNG",
+                model: "Galaxy S20",
+            },
         },
     ];
 
@@ -44,4 +52,33 @@ export function mock(axios: any) {
         });
     });
     /* End Products */
+
+    /* Parameters */
+    const parameters = [
+        {
+            key: "manufacturer",
+            name: "Производитель",
+            description: "",
+            prefix: "",
+            suffix: "",
+        },
+        {
+            key: "model",
+            name: "Модель",
+            description: "",
+            prefix: "",
+            suffix: "",
+        },
+        {
+            key: "price",
+            name: "Цена",
+            description: "",
+            prefix: "",
+            suffix: "р.",
+        },
+    ];
+
+    //loadAll
+    mock.onGet("/api/parameters/").reply(200, parameters);
+    /* End Parameters */
 }

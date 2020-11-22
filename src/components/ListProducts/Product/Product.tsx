@@ -1,18 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import useCustomSelector from "src/hooks/useCustomSelector";
+import { parameterState } from "src/store/rootSelector";
 import { Link } from "react-router-dom";
 import ProductModel from "src/models/product";
+import ListParameters from "./ListParameters/ListParameters";
 
 interface IProductProps {
     product: ProductModel;
 }
 
 export default function Product(props: IProductProps) {
+    const parameters = useCustomSelector(parameterState);
+
     return (
         <Wrapper>
             <Link to={"/products/" + props.product.id}>Редактировать товар</Link>
             <Name>{props.product.name}</Name>
             <Description>{props.product.description}</Description>
+            <ListParameters productParameters={props.product.parameters} libraryParameters={parameters} />
         </Wrapper>
     );
 }

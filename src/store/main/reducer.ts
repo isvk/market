@@ -10,6 +10,9 @@ const reducer = (state: TStoreMain = new Main(), action: ActionTypesInfer<typeof
         case types.UPDATE_STATUS_LOADING_PRODUCTS:
             return state.set("statusLoadingProducts", action.status);
 
+        case types.UPDATE_STATUS_LOADING_PARAMETERS:
+            return state.set("statusLoadingParameters", action.status);
+
         default:
             return state;
     }
