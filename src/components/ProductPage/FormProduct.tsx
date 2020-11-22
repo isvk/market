@@ -19,7 +19,7 @@ export default function FormProduct(props: IProductFormProps) {
     const dictionaryGetByKey = (key: string) =>
         libraryParameters.find((libraryParameter) => libraryParameter.key === key);
 
-    const handleParameter = (key: string, value: string) => {
+    const handleChangeValueParameter = (key: string, value: string) => {
         setProduct(product.set("parameters", { ...product.parameters, [key]: value }));
     };
 
@@ -59,7 +59,7 @@ export default function FormProduct(props: IProductFormProps) {
                             <div>
                                 <input
                                     value={keyValue[1]}
-                                    onChange={(e) => handleParameter(keyValue[0], e.target.value)}
+                                    onChange={(e) => handleChangeValueParameter(keyValue[0], e.target.value)}
                                 />
                             </div>
                             <div>
