@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import useCustomDispatch from "src/hooks/useCustomDispatch";
 import useCustomSelector from "src/hooks/useCustomSelector";
 import { createProduct, updateProduct } from "src/store/products/actions";
@@ -15,12 +15,22 @@ export default function FormProduct(props: IProductFormProps) {
     const dispatch = useCustomDispatch();
     const libraryParameters = useCustomSelector(parameterState);
     const [product, setProduct] = useState(props.product);
+    const refSelectAddParameter = useRef<HTMLSelectElement>(null);
+
+    const availableParameters = libraryParameters.filter(
+        (libraryParameter) => !(libraryParameter.key in product.parameters)
+    );
 
     const dictionaryGetByKey = (key: string) =>
         libraryParameters.find((libraryParameter) => libraryParameter.key === key);
 
     const handleChangeValueParameter = (key: string, value: string) => {
         setProduct(product.set("parameters", { ...product.parameters, [key]: value }));
+    };
+
+    const handleAddParameter = () => {
+        if (refSelectAddParameter.current)
+            setProduct(product.set("parameters", { ...product.parameters, [refSelectAddParameter.current.value]: "" }));
     };
 
     const handleDeleteParameter = (key: string) => {
@@ -67,6 +77,19 @@ export default function FormProduct(props: IProductFormProps) {
                             </div>
                         </div>
                     ))}
+
+                    {availableParameters.size > 0 && (
+                        <div>
+                            <select ref={refSelectAddParameter}>
+                                {availableParameters.valueSeq().map((parameter) => (
+                                    <option value={parameter.key} key={parameter.key}>
+                                        {parameter.name}
+                                    </option>
+                                ))}
+                            </select>
+                            <button onClick={handleAddParameter}>Добавить параметр</button>
+                        </div>
+                    )}
                 </div>
             </div>
             <div>
