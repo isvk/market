@@ -23,6 +23,11 @@ export default function FormProduct(props: IProductFormProps) {
         setProduct(product.set("parameters", { ...product.parameters, [key]: value }));
     };
 
+    const handleDeleteParameter = (key: string) => {
+        Reflect.deleteProperty(product.parameters, key);
+        setProduct(product.set("parameters", { ...product.parameters }));
+    };
+
     const handleSave = () =>
         dispatch(props.typeForm === "create" ? createProduct(product) : updateProduct(product.id, product));
 
@@ -56,6 +61,9 @@ export default function FormProduct(props: IProductFormProps) {
                                     value={keyValue[1]}
                                     onChange={(e) => handleParameter(keyValue[0], e.target.value)}
                                 />
+                            </div>
+                            <div>
+                                <button onClick={() => handleDeleteParameter(keyValue[0])}>Удалить</button>
                             </div>
                         </div>
                     ))}
