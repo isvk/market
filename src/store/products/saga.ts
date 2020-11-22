@@ -10,7 +10,7 @@ import {
     updateProductSuccess,
 } from "./actions";
 import { addProducts } from "src/store/products/actions";
-import { updateStatusLoadingProducts } from "src/store/main/actions";
+import { updateStatusLoadingProduct, updateStatusLoadingProducts } from "src/store/main/actions";
 import { loadStatus } from "src/store/loadStatus";
 
 function* loadProductsAsync(services: typeof bottle, action: ReturnType<typeof loadProducts>) {
@@ -37,10 +37,10 @@ function* loadProductByIdAsync(services: typeof bottle, action: ReturnType<typeo
     try {
         let product = yield call(services.container.ApiProduct.read, action.id);
         yield put(addProducts([product]));
-        yield put(updateStatusLoadingProducts(loadStatus.loaded));
+        yield put(updateStatusLoadingProduct(loadStatus.loaded));
     } catch (e) {
         console.error(e);
-        yield put(updateStatusLoadingProducts(loadStatus.errorServer));
+        yield put(updateStatusLoadingProduct(loadStatus.errorServer));
     }
 }
 
