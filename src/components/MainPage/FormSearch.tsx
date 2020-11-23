@@ -21,6 +21,7 @@ export default function FormSearch(props: IFormSearchProps) {
 
 const Wrapper = styled.div`
     display: flex;
+    margin: 15px 0;
 `;
 
 const Label = styled.div`

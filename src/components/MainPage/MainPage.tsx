@@ -14,6 +14,10 @@ import LoadProducts from "./LoadProducts";
 import ListProducts from "src/components/ListProducts/ListProducts";
 import FormSearch from "./FormSearch";
 import { updateSearchWord } from "src/store/main/actions";
+import TitleFirst from "src/components/UI/TitleFirst";
+import TitlePanel from "src/components/UI/TitlePanel";
+import LinkButton from "src/components/UI/LinkButton";
+import { Plus as PlusIcon } from "@styled-icons/boxicons-regular/Plus";
 
 export default function MainPage() {
     const dispatch = useCustomDispatch();
@@ -40,6 +44,13 @@ export default function MainPage() {
             {statusProducts === loadStatus.errorServer && <Alert type="warning" text="Ошибка сервера" />}
             {statusProducts === loadStatus.loaded && (
                 <>
+                    <TitlePanel>
+                        <TitleFirst>Список товары</TitleFirst>
+                        <LinkButton to="/products/create">
+                            <PlusIcon size="20" />
+                            Создать товар
+                        </LinkButton>
+                    </TitlePanel>
                     <FormSearch handleChangeSearch={handleChangeSearch} />
                     <ListProducts products={products} />
                 </>

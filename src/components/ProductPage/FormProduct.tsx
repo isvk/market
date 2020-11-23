@@ -5,13 +5,15 @@ import useCustomSelector from "src/hooks/useCustomSelector";
 import { createProduct, updateProduct } from "src/store/products/actions";
 import { parameterState } from "src/store/rootSelector";
 import ProductModel from "src/models/product";
-import { Link } from "react-router-dom";
 import TitleSecond from "src/components/UI/TitleSecond";
 import TitleFirst from "src/components/UI/TitleFirst";
+import TitlePanel from "src/components/UI/TitlePanel";
+import LinkButton from "src/components/UI/LinkButton";
 import FieldInput from "src/components/UI/FieldInput";
 import FieldTextarea from "src/components/UI/FieldTextarea";
 import FieldSelect from "src/components/UI/FieldSelect";
 import Button from "src/components/UI/Button";
+import { ListUl as ListIcon } from "@styled-icons/boxicons-regular/ListUl";
 import { Trash as TrashIcon } from "@styled-icons/boxicons-regular/Trash";
 import { Plus as PlusIcon } from "@styled-icons/boxicons-regular/Plus";
 import { IThemeProps } from "../../App";
@@ -53,8 +55,12 @@ export default function FormProduct(props: IProductFormProps) {
 
     return (
         <>
-            <Link to={"/products"}>К списку товаров</Link>
-            <TitleFirst>{props.typeForm === "create" ? "Создание товара" : "Редактирование товара"}</TitleFirst>
+            <TitlePanel>
+                <TitleFirst>{props.typeForm === "create" ? "Создание товара" : "Редактирование товара"}</TitleFirst>
+                <LinkButton to={"/products"}>
+                    <ListIcon size="20" />К списку товаров
+                </LinkButton>
+            </TitlePanel>
             <Panel>
                 <TitleSecond>Статиченые параметры</TitleSecond>
                 <StaticParameter>
@@ -82,7 +88,7 @@ export default function FormProduct(props: IProductFormProps) {
                                 />
                             </WrapperFieldParameter>
                             <ButtonDeleteParameter onClick={() => handleDeleteParameter(keyValue[0])}>
-                                <TrashIcon size="14" />
+                                <TrashIcon size="20" />
                                 <TextButtonDeleteParameter>Удалить</TextButtonDeleteParameter>
                             </ButtonDeleteParameter>
                         </DynamicParameter>
@@ -101,7 +107,7 @@ export default function FormProduct(props: IProductFormProps) {
                                 </FieldSelect>
                             </WrapperFieldParameter>
                             <ButtonAddParameter onClick={handleAddParameter}>
-                                <PlusIcon size="14" />
+                                <PlusIcon size="20" />
                                 <TextButtonAddParameter>Добавить</TextButtonAddParameter>
                             </ButtonAddParameter>
                         </DynamicParameter>

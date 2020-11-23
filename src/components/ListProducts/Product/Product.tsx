@@ -2,11 +2,13 @@ import React from "react";
 import styled from "styled-components";
 import useCustomSelector from "src/hooks/useCustomSelector";
 import { parameterState } from "src/store/rootSelector";
-import { Link } from "react-router-dom";
 import ProductModel from "src/models/product";
 import ListParameters from "./ListParameters/ListParameters";
+import TitlePanel from "src/components/UI/TitlePanel";
 import TitleFirst from "src/components/UI/TitleFirst";
+import LinkButton from "src/components/UI/LinkButton";
 import TitleSecond from "src/components/UI/TitleSecond";
+
 import { IThemeProps } from "src/App";
 import { Edit } from "@styled-icons/boxicons-regular/Edit";
 
@@ -20,13 +22,13 @@ export default function Product(props: IProductProps) {
     return (
         <CardProduct>
             <HeadCardProduct>
-                <ControlPanel>
-                    <LinkEdit to={"/products/" + props.product.id}>
+                <TitlePanel>
+                    <Name>{props.product.name}</Name>
+                    <LinkButton to={"/products/" + props.product.id}>
                         <EditIcon size="16" />
                         Редактировать товар
-                    </LinkEdit>
-                </ControlPanel>
-                <Name>{props.product.name}</Name>
+                    </LinkButton>
+                </TitlePanel>
             </HeadCardProduct>
             <BodyCardProduct>
                 <BockDescription>
@@ -53,18 +55,6 @@ const CardProduct = styled.div`
 const HeadCardProduct = styled.div``;
 
 const Name = styled(TitleFirst)``;
-
-const ControlPanel = styled.div``;
-
-const LinkEdit = styled(Link)`
-    background-color: ${(props: IThemeProps) => props.theme.color_main};
-    border: 1px solid ${(props: IThemeProps) => props.theme.color_main};
-    border-radius: 5px;
-    text-decoration: none;
-    line-height: 2em;
-    color: #fff;
-    padding: 4px 15px;
-`;
 
 const EditIcon = styled(Edit)`
     padding-right: 3px;

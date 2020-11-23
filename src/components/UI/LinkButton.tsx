@@ -1,27 +1,29 @@
-import React, { MouseEvent, ReactNode } from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
 import { IThemeProps } from "src/App";
+import { Link } from "react-router-dom";
 
-interface IButtonProps {
+interface ILinkButtonProps {
     className?: string;
     children?: ReactNode;
-    onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
+    to: string;
 }
 
-export default function Button(props: IButtonProps) {
-    return <ButtonStyled {...props}>{props.children}</ButtonStyled>;
+export default function LinkButton(props: ILinkButtonProps) {
+    return <LinkButtonStyled {...props}>{props.children}</LinkButtonStyled>;
 }
 
-const ButtonStyled = styled.button`
+const LinkButtonStyled = styled(Link)`
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: ${(props: IThemeProps) => props.theme.color_main};
     border: 1px solid ${(props: IThemeProps) => props.theme.color_main};
     border-radius: 2px;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    line-height: 2em;
     color: #fff;
-    height: 3em;
-    padding: 0 1em;
     cursor: pointer;
 
     &:hover {
