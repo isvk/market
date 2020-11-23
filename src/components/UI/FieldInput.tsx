@@ -6,10 +6,18 @@ interface IFieldInputProps {
     className?: string;
     value?: string;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+    placeholder?: string;
 }
 
 export default function FieldInput(props: IFieldInputProps) {
-    return <FieldInputStyled className={props.className} value={props.value} onChange={props.onChange} />;
+    return (
+        <FieldInputStyled
+            className={props.className}
+            value={props.value}
+            onChange={props.onChange}
+            placeholder={props.placeholder}
+        />
+    );
 }
 
 const FieldInputStyled = styled.input`
