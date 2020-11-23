@@ -43,6 +43,7 @@ const Wrapper = styled.div`
     margin: 0 auto;
     font-size: 16px;
     background-color: #fafafa;
+    padding: 0 10px;
 `;
 
 export default App;
