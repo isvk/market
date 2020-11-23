@@ -25,6 +25,7 @@ function App() {
 export interface IThemeProps {
     theme: {
         media_tablet: number;
+        media_mobile: number;
         color_main: string;
         color_title: string;
     };
@@ -32,6 +33,7 @@ export interface IThemeProps {
 
 export const theme = {
     media_tablet: 768,
+    media_mobile: 414,
     color_main: "#2196f3",
     color_title: "#2196f3",
 };
