@@ -18,3 +18,9 @@ export const updateStatusLoadingParameters = (status: loadStatus) =>
         type: types.UPDATE_STATUS_LOADING_PARAMETERS,
         status,
     } as const);
+
+export const updateSearchWord = (searchWord: string) =>
+    ({
+        type: types.UPDATE_SEARCH_WORD,
+        searchWord,
+    } as const);
