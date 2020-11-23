@@ -9,11 +9,7 @@ interface IButtonProps {
 }
 
 export default function Button(props: IButtonProps) {
-    return (
-        <ButtonStyled className={props.className} onClick={props.onClick}>
-            {props.children}
-        </ButtonStyled>
-    );
+    return <ButtonStyled {...props}>{props.children}</ButtonStyled>;
 }
 
 const ButtonStyled = styled.button`

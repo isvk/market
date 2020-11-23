@@ -10,7 +10,7 @@ interface IFieldSelectProps {
 
 export default function FieldSelect(props: IFieldSelectProps) {
     return (
-        <FieldSelectStyled className={props.className} ref={props.innerRef}>
+        <FieldSelectStyled {...props} ref={props.innerRef}>
             {props.children}
         </FieldSelectStyled>
     );

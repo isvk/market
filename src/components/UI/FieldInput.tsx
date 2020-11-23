@@ -10,14 +10,7 @@ interface IFieldInputProps {
 }
 
 export default function FieldInput(props: IFieldInputProps) {
-    return (
-        <FieldInputStyled
-            className={props.className}
-            value={props.value}
-            onChange={props.onChange}
-            placeholder={props.placeholder}
-        />
-    );
+    return <FieldInputStyled {...props} />;
 }
 
 const FieldInputStyled = styled.input`

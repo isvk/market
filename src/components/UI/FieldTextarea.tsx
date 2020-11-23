@@ -9,7 +9,7 @@ interface IFieldTextareaProps {
 }
 
 export default function FieldTextarea(props: IFieldTextareaProps) {
-    return <FieldTextareaStyled className={props.className} value={props.value} onChange={props.onChange} />;
+    return <FieldTextareaStyled {...props} />;
 }
 
 const FieldTextareaStyled = styled.textarea`
