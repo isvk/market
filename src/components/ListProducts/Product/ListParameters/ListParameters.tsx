@@ -15,13 +15,32 @@ export default function ListParameters(props: IListParametersProps) {
     return (
         <Wrapper>
             {Object.entries(props.productParameters).map((keyValue) => (
-                <div key={keyValue[0]}>
-                    <div>{dictionaryGetByKey(keyValue[0])?.name}:</div>
-                    <div>{keyValue[1]}</div>
-                </div>
+                <Parameter key={keyValue[0]}>
+                    <Label>{dictionaryGetByKey(keyValue[0])?.name + ":"}</Label>
+                    <Value>
+                        {keyValue[1]} {dictionaryGetByKey(keyValue[0])?.suffix}
+                    </Value>
+                </Parameter>
             ))}
         </Wrapper>
     );
 }
 
 const Wrapper = styled.div``;
+
+const Parameter = styled.div`
+    display: flex;
+    width: 100%;
+`;
+
+const Label = styled.div`
+    flex-basis: 50%;
+    padding-right: 5px;
+    font-weight: 600;
+    color: #a0b0b9;
+    line-height: 2em;
+`;
+
+const Value = styled.div`
+    line-height: 2em;
+`;
