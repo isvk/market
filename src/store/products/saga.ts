@@ -1,14 +1,7 @@
 import bottle from "src/services";
 import { call, put, takeEvery } from "@redux-saga/core/effects";
 import * as types from "./types";
-import {
-    createProduct,
-    createProductSuccess,
-    loadProductById,
-    loadProducts,
-    updateProduct,
-    updateProductSuccess,
-} from "./actions";
+import { createProduct, createProductSuccess, loadProductById, updateProduct, updateProductSuccess } from "./actions";
 import { addProducts } from "src/store/products/actions";
 import {
     updateStatusLoadingProduct,
@@ -17,8 +10,9 @@ import {
 } from "src/store/main/actions";
 import { loadStatus } from "src/store/loadStatus";
 import { saveStatus } from "../saveStatus";
+import { push } from "connected-react-router";
 
-function* loadProductsAsync(services: typeof bottle, action: ReturnType<typeof loadProducts>) {
+function* loadProductsAsync(services: typeof bottle) {
     try {
         let products = yield call(services.container.ApiProduct.loadAll);
         yield put(addProducts(products));
@@ -34,6 +28,7 @@ function* createProductAsync(services: typeof bottle, action: ReturnType<typeof 
         let product = yield call(services.container.ApiProduct.create, action.product);
         yield put(createProductSuccess(product));
         yield put(updateStatusSavingProduct(saveStatus.saved));
+        yield put(push("/products/" + product.id));
     } catch (e) {
         console.error(e);
         yield put(updateStatusSavingProduct(saveStatus.errorServer));
