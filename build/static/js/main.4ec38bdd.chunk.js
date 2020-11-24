@@ -6,20 +6,20 @@
             "use strict";
             t.r(n),
                 t.d(n, "history", function () {
-                    return rr;
+                    return cr;
                 });
             var r,
                 c,
                 a = t(1),
                 i = t(0),
                 o = t.n(i),
-                u = t(33),
+                u = t(34),
                 s = t.n(u),
                 d = t(23),
                 b = t(24),
                 j = t(17),
                 f = t(58),
-                p = t(39),
+                p = t(30),
                 l = t(75),
                 O = t(21),
                 h = t(29),
@@ -190,45 +190,46 @@
                 ee = function (e) {
                     return { type: G, product: e };
                 },
-                ne = q.a.mark(ie),
+                ne = t(14),
                 te = q.a.mark(oe),
                 re = q.a.mark(ue),
                 ce = q.a.mark(se),
-                ae = q.a.mark(de);
-            function ie(e, n) {
-                var t;
+                ae = q.a.mark(de),
+                ie = q.a.mark(be);
+            function oe(e) {
+                var n;
                 return q.a.wrap(
-                    function (n) {
+                    function (t) {
                         for (;;)
-                            switch ((n.prev = n.next)) {
+                            switch ((t.prev = t.next)) {
                                 case 0:
-                                    return (n.prev = 0), (n.next = 3), Object(M.b)(e.container.ApiProduct.loadAll);
+                                    return (t.prev = 0), (t.next = 3), Object(M.b)(e.container.ApiProduct.loadAll);
                                 case 3:
-                                    return (t = n.sent), (n.next = 6), Object(M.c)(Q(t));
+                                    return (n = t.sent), (t.next = 6), Object(M.c)(Q(n));
                                 case 6:
-                                    return (n.next = 8), Object(M.c)(B(r.loaded));
+                                    return (t.next = 8), Object(M.c)(B(r.loaded));
                                 case 8:
-                                    n.next = 15;
+                                    t.next = 15;
                                     break;
                                 case 10:
                                     return (
-                                        (n.prev = 10),
-                                        (n.t0 = n.catch(0)),
-                                        console.error(n.t0),
-                                        (n.next = 15),
+                                        (t.prev = 10),
+                                        (t.t0 = t.catch(0)),
+                                        console.error(t.t0),
+                                        (t.next = 15),
                                         Object(M.c)(B(r.errorServer))
                                     );
                                 case 15:
                                 case "end":
-                                    return n.stop();
+                                    return t.stop();
                             }
                     },
-                    ne,
+                    te,
                     null,
                     [[0, 10]]
                 );
             }
-            function oe(e, n) {
+            function ue(e, n) {
                 var t;
                 return q.a.wrap(
                     function (r) {
@@ -245,27 +246,29 @@
                                 case 6:
                                     return (r.next = 8), Object(M.c)(V(c.saved));
                                 case 8:
-                                    r.next = 15;
-                                    break;
+                                    return (r.next = 10), Object(M.c)(Object(ne.d)("/products/" + t.id));
                                 case 10:
+                                    r.next = 17;
+                                    break;
+                                case 12:
                                     return (
-                                        (r.prev = 10),
+                                        (r.prev = 12),
                                         (r.t0 = r.catch(0)),
                                         console.error(r.t0),
-                                        (r.next = 15),
+                                        (r.next = 17),
                                         Object(M.c)(V(c.errorServer))
                                     );
-                                case 15:
+                                case 17:
                                 case "end":
                                     return r.stop();
                             }
                     },
-                    te,
+                    re,
                     null,
-                    [[0, 10]]
+                    [[0, 12]]
                 );
             }
-            function ue(e, n) {
+            function se(e, n) {
                 var t;
                 return q.a.wrap(
                     function (c) {
@@ -293,12 +296,12 @@
                                     return c.stop();
                             }
                     },
-                    re,
+                    ce,
                     null,
                     [[0, 10]]
                 );
             }
-            function se(e, n) {
+            function de(e, n) {
                 var t;
                 return q.a.wrap(
                     function (r) {
@@ -330,37 +333,37 @@
                                     return r.stop();
                             }
                     },
-                    ce,
+                    ae,
                     null,
                     [[0, 10]]
                 );
             }
-            function de(e) {
+            function be(e) {
                 return q.a.wrap(function (n) {
                     for (;;)
                         switch ((n.prev = n.next)) {
                             case 0:
-                                return (n.next = 2), Object(M.d)(C, ie, e);
+                                return (n.next = 2), Object(M.d)(C, oe, e);
                             case 2:
-                                return (n.next = 4), Object(M.d)(R, ue, e);
+                                return (n.next = 4), Object(M.d)(R, se, e);
                             case 4:
-                                return (n.next = 6), Object(M.d)(U, oe, e);
+                                return (n.next = 6), Object(M.d)(U, ue, e);
                             case 6:
-                                return (n.next = 8), Object(M.d)(z, se, e);
+                                return (n.next = 8), Object(M.d)(z, de, e);
                             case 8:
                             case "end":
                                 return n.stop();
                         }
-                }, ae);
+                }, ie);
             }
-            var be = t(61),
-                je = t(35),
-                fe = t.n(je),
-                pe = t(10),
-                le = t(62),
-                Oe = t.n(le);
+            var je = t(61),
+                fe = t(36),
+                pe = t.n(fe),
+                le = t(10),
+                Oe = t(62),
+                he = t.n(Oe);
             !(function (e) {
-                var n = new Oe.a(e, { delayResponse: 1e3 }),
+                var n = new he.a(e, { delayResponse: 1e3 }),
                     t = [
                         {
                             id: "7df78ad8902c6313",
@@ -379,7 +382,7 @@
                     ];
                 n.onGet("/api/products/").reply(200, t),
                     n.onPut("/api/products/").reply(function (e) {
-                        var r = Object(pe.a)(Object(pe.a)({}, JSON.parse(e.data)), {}, { id: Date.now().toString() });
+                        var r = Object(le.a)(Object(le.a)({}, JSON.parse(e.data)), {}, { id: Date.now().toString() });
                         return (
                             t.push(r),
                             n.onPost("/api/products/" + r.id).reply(function (e) {
@@ -419,8 +422,8 @@
                             suffix: "\u0440.",
                         },
                     ]);
-            })(fe.a);
-            var he = (function (e) {
+            })(pe.a);
+            var xe = (function (e) {
                     Object(h.a)(t, e);
                     var n = Object(x.a)(t);
                     function t() {
@@ -428,8 +431,8 @@
                     }
                     return t;
                 })(Object(v.b)({ key: "", name: "", description: "", prefix: "", suffix: "" })),
-                xe = t(74),
-                ve = (function (e) {
+                ve = t(74),
+                me = (function (e) {
                     Object(h.a)(t, e);
                     var n = Object(x.a)(t);
                     function t() {
@@ -437,9 +440,9 @@
                     }
                     return t;
                 })(Object(v.b)({ id: "", name: "", description: "", parameters: {} })),
-                me = new be.a(),
-                ge = me;
-            me.service("Http", function e() {
+                ge = new je.a(),
+                ye = ge;
+            ge.service("Http", function e() {
                 var n = this;
                 Object(O.a)(this, e),
                     (this.get = function (e, t) {
@@ -458,12 +461,12 @@
                         var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "GET",
                             n = arguments.length > 1 ? arguments[1] : void 0,
                             t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                        return fe()({ method: e, url: "/api" + n, data: t }).then(function (e) {
+                        return pe()({ method: e, url: "/api" + n, data: t }).then(function (e) {
                             return e.data;
                         });
                     });
             }),
-                me.service(
+                ge.service(
                     "ApiParameter",
                     function e(n) {
                         var t = this,
@@ -474,14 +477,14 @@
                             (this.loadAll = function () {
                                 return t.http.get(t.url + "/").then(function (e) {
                                     return e.map(function (e) {
-                                        return new he(e);
+                                        return new xe(e);
                                     });
                                 });
                             });
                     },
                     "Http"
                 ),
-                me.service(
+                ge.service(
                     "ApiProduct",
                     function e(n) {
                         var t = this,
@@ -492,63 +495,63 @@
                             (this.loadAll = function () {
                                 return t.http.get(t.url + "/").then(function (e) {
                                     return e.map(function (e) {
-                                        return new ve(e);
+                                        return new me(e);
                                     });
                                 });
                             }),
                             (this.create = function (e) {
                                 return t.http.put(t.url + "/", e.toJSON()).then(function (e) {
-                                    return new ve(e);
+                                    return new me(e);
                                 });
                             }),
                             (this.read = function (e) {
                                 return t.http.get(t.url + "/" + e).then(function (e) {
-                                    return new ve(e);
+                                    return new me(e);
                                 });
                             }),
                             (this.update = function (e, n) {
                                 return t.http.post(t.url + "/" + e, n.toJSON()).then(function (e) {
-                                    return new ve(e);
+                                    return new me(e);
                                 });
                             });
                     },
                     "Http"
                 );
-            var ye = t(4),
-                we = t(3),
-                Se = t(9);
-            function Pe() {
+            var we = t(4),
+                Se = t(3),
+                Pe = t(9);
+            function _e() {
                 return Object(b.d)();
             }
-            function _e(e, n) {
+            function Ae(e, n) {
                 return Object(b.e)(function (t) {
                     return e(t, n);
                 });
             }
-            var Ae = t(27),
-                ke = function (e) {
+            var ke = t(27),
+                Ee = function (e) {
                     return e.main;
                 },
-                Ee = Object(Ae.a)(ke, function (e) {
+                Te = Object(ke.a)(Ee, function (e) {
                     return e.statusLoadingProduct;
                 }),
-                Te = Object(Ae.a)(ke, function (e) {
+                De = Object(ke.a)(Ee, function (e) {
                     return e.statusLoadingProducts;
                 }),
-                De = Object(Ae.a)(ke, function (e) {
+                Ce = Object(ke.a)(Ee, function (e) {
                     return e.statusLoadingParameters;
                 }),
-                Ce = Object(Ae.a)(ke, function (e) {
+                Re = Object(ke.a)(Ee, function (e) {
                     return e.statusSavingProduct;
                 }),
-                Re = function (e) {
+                Ue = function (e) {
                     return e.parameters;
                 },
-                Ue = function (e) {
+                Le = function (e) {
                     return e.products;
                 },
-                Le = Object(Ae.a)(
-                    Ue,
+                ze = Object(ke.a)(
+                    Le,
                     function (e, n) {
                         return n;
                     },
@@ -558,11 +561,11 @@
                         });
                     }
                 ),
-                ze = Object(Ae.a)(function (e) {
+                Ge = Object(ke.a)(function (e) {
                     return 0 === e.main.searchWord.length
                         ? e
-                        : Object(pe.a)(
-                              Object(pe.a)({}, e),
+                        : Object(le.a)(
+                              Object(le.a)({}, e),
                               {},
                               {
                                   products:
@@ -573,7 +576,7 @@
                                           return (
                                               -1 !==
                                               []
-                                                  .concat(Object(xe.a)(Object.values(e.parameters)), [
+                                                  .concat(Object(ve.a)(Object.values(e.parameters)), [
                                                       e.name,
                                                       e.description,
                                                   ])
@@ -584,22 +587,11 @@
                               }
                           );
                     var n, t;
-                }, Ue),
-                Ge = t(68),
-                Ne = t(37);
-            function Fe() {
-                var e = Object(ye.a)(["\n    color: #ff0000;\n"]);
-                return (
-                    (Fe = function () {
-                        return e;
-                    }),
-                    e
-                );
-            }
+                }, Le),
+                Ne = t(68),
+                Fe = t(38);
             function Ie() {
-                var e = Object(ye.a)([
-                    "\n    animation: rotate 2s linear infinite;\n    color: #2196f3;\n\n    @keyframes rotate {\n        100% {\n            transform: rotate(360deg);\n        }\n    }\n",
-                ]);
+                var e = Object(we.a)(["\n    color: #ff0000;\n"]);
                 return (
                     (Ie = function () {
                         return e;
@@ -608,8 +600,8 @@
                 );
             }
             function qe() {
-                var e = Object(ye.a)([
-                    "\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 50% 0;\n    font-style: normal;\n    font-weight: 400;\n    font-size: 16px;\n    line-height: 28px;\n    color: #4a4a4a;\n",
+                var e = Object(we.a)([
+                    "\n    animation: rotate 2s linear infinite;\n    color: #2196f3;\n\n    @keyframes rotate {\n        100% {\n            transform: rotate(360deg);\n        }\n    }\n",
                 ]);
                 return (
                     (qe = function () {
@@ -618,110 +610,121 @@
                     e
                 );
             }
-            function Je(e) {
-                return Object(a.jsxs)(Me, {
+            function Je() {
+                var e = Object(we.a)([
+                    "\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 50% 0;\n    font-style: normal;\n    font-weight: 400;\n    font-size: 16px;\n    line-height: 28px;\n    color: #4a4a4a;\n",
+                ]);
+                return (
+                    (Je = function () {
+                        return e;
+                    }),
+                    e
+                );
+            }
+            function Me(e) {
+                return Object(a.jsxs)(We, {
                     children: [
                         "preload" === e.type &&
-                            Object(a.jsxs)(a.Fragment, { children: [Object(a.jsx)(We, { size: "28" }), " ", e.text] }),
-                        "warning" === e.type &&
                             Object(a.jsxs)(a.Fragment, { children: [Object(a.jsx)(He, { size: "28" }), " ", e.text] }),
+                        "warning" === e.type &&
+                            Object(a.jsxs)(a.Fragment, { children: [Object(a.jsx)(Be, { size: "28" }), " ", e.text] }),
                     ],
                 });
             }
-            var Me = we.b.div(qe()),
-                We = Object(we.b)(Ne.a)(Ie()),
-                He = Object(we.b)(Ge.a)(Fe());
-            function Be() {
-                var e = Pe();
+            var We = Se.b.div(Je()),
+                He = Object(Se.b)(Fe.a)(qe()),
+                Be = Object(Se.b)(Ne.a)(Ie());
+            function Ve() {
+                var e = _e();
                 return (
                     Object(i.useEffect)(function () {
                         e({ type: E });
                     }, []),
-                    Object(a.jsx)(Je, { type: "preload", text: "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430..." })
+                    Object(a.jsx)(Me, { type: "preload", text: "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430..." })
                 );
             }
-            function Ve() {
-                var e = Pe();
+            function Xe() {
+                var e = _e();
                 return (
                     Object(i.useEffect)(function () {
                         e({ type: C });
                     }, []),
-                    Object(a.jsx)(Je, { type: "preload", text: "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430..." })
+                    Object(a.jsx)(Me, { type: "preload", text: "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430..." })
                 );
             }
-            function Xe() {
-                var e = Object(ye.a)([
+            function $e() {
+                var e = Object(we.a)([
                     "\n    font-weight: 600;\n    font-size: 1.5em;\n    line-height: 2em;\n    color: ",
                     ";\n",
                 ]);
                 return (
-                    (Xe = function () {
+                    ($e = function () {
                         return e;
                     }),
                     e
                 );
             }
-            function $e(e) {
-                return Object(a.jsx)(Ye, { children: e.children });
+            function Ye(e) {
+                return Object(a.jsx)(Ke, { children: e.children });
             }
-            var Ye = we.b.h1(Xe(), function (e) {
+            var Ke = Se.b.h1($e(), function (e) {
                 return e.theme.color_title;
             });
-            function Ke() {
-                var e = Object(ye.a)([
+            function Qe() {
+                var e = Object(we.a)([
                     "\n    font-weight: 600;\n    font-size: 1.2em;\n    line-height: 2em;\n    color: ",
                     ";\n",
                 ]);
                 return (
-                    (Ke = function () {
+                    (Qe = function () {
                         return e;
                     }),
                     e
                 );
             }
-            function Qe(e) {
-                return Object(a.jsx)(Ze, { children: e.children });
+            function Ze(e) {
+                return Object(a.jsx)(en, { children: e.children });
             }
-            var Ze = we.b.h1(Ke(), function (e) {
+            var en = Se.b.h1(Qe(), function (e) {
                 return e.theme.color_title;
             });
-            function en() {
-                var e = Object(ye.a)([
+            function nn() {
+                var e = Object(we.a)([
                     "\n    display: flex;\n    justify-content: space-between;\n    margin: 15px 0;\n\n    @media (max-width: ",
                     "px) {\n        flex-flow: column;\n    }\n",
                 ]);
                 return (
-                    (en = function () {
+                    (nn = function () {
                         return e;
                     }),
                     e
                 );
             }
-            function nn(e) {
-                return Object(a.jsx)(tn, { children: e.children });
+            function tn(e) {
+                return Object(a.jsx)(rn, { children: e.children });
             }
-            var tn = we.b.div(en(), function (e) {
+            var rn = Se.b.div(nn(), function (e) {
                     return e.theme.media_mobile;
                 }),
-                rn = t(42);
-            function cn() {
-                var e = Object(ye.a)([
+                cn = t(42);
+            function an() {
+                var e = Object(we.a)([
                     "\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    background-color: ",
                     ";\n    border: 1px solid ",
                     ";\n    border-radius: 2px;\n    padding: 0.5em 1em;\n    text-decoration: none;\n    line-height: 2em;\n    color: #fff;\n    cursor: pointer;\n\n    &:hover {\n        background-color: #359eef;\n    }\n",
                 ]);
                 return (
-                    (cn = function () {
+                    (an = function () {
                         return e;
                     }),
                     e
                 );
             }
-            function an(e) {
-                return Object(a.jsx)(on, Object(pe.a)(Object(pe.a)({}, e), {}, { children: e.children }));
+            function on(e) {
+                return Object(a.jsx)(un, Object(le.a)(Object(le.a)({}, e), {}, { children: e.children }));
             }
-            var on = Object(we.b)(rn.a)(
-                cn(),
+            var un = Object(Se.b)(cn.a)(
+                an(),
                 function (e) {
                     return e.theme.color_main;
                 },
@@ -729,38 +732,26 @@
                     return e.theme.color_main;
                 }
             );
-            function un() {
-                var e = Object(ye.a)([
+            function sn() {
+                var e = Object(we.a)([
                     "\n    display: block;\n    width: 100%;\n    border: 1px solid #9abbce;\n    border-radius: 2px;\n    line-height: 3em;\n    height: 3em;\n    padding: 0 1em;\n    box-sizing: border-box;\n\n    &:hover,\n    &:focus {\n        border: 1px solid ",
                     ";\n    }\n",
                 ]);
                 return (
-                    (un = function () {
+                    (sn = function () {
                         return e;
                     }),
                     e
                 );
             }
-            function sn(e) {
-                return Object(a.jsx)(dn, Object(pe.a)({}, e));
+            function dn(e) {
+                return Object(a.jsx)(bn, Object(le.a)({}, e));
             }
-            var dn = we.b.input(un(), function (e) {
+            var bn = Se.b.input(sn(), function (e) {
                 return e.theme.color_main;
             });
-            function bn() {
-                var e = Object(ye.a)(["\n    flex-grow: 1;\n"]);
-                return (
-                    (bn = function () {
-                        return e;
-                    }),
-                    e
-                );
-            }
             function jn() {
-                var e = Object(ye.a)([
-                    "\n    flex-grow: 0;\n    white-space: nowrap;\n    font-weight: 600;\n    font-size: 1.2em;\n    line-height: 2em;\n    padding-right: 0.5em;\n    color: ",
-                    ";\n",
-                ]);
+                var e = Object(we.a)(["\n    flex-grow: 1;\n"]);
                 return (
                     (jn = function () {
                         return e;
@@ -769,7 +760,10 @@
                 );
             }
             function fn() {
-                var e = Object(ye.a)(["\n    display: flex;\n    margin: 15px 0;\n"]);
+                var e = Object(we.a)([
+                    "\n    flex-grow: 0;\n    white-space: nowrap;\n    font-weight: 600;\n    font-size: 1.2em;\n    line-height: 2em;\n    padding-right: 0.5em;\n    color: ",
+                    ";\n",
+                ]);
                 return (
                     (fn = function () {
                         return e;
@@ -777,11 +771,20 @@
                     e
                 );
             }
-            function pn(e) {
-                return Object(a.jsxs)(ln, {
+            function pn() {
+                var e = Object(we.a)(["\n    display: flex;\n    margin: 15px 0;\n"]);
+                return (
+                    (pn = function () {
+                        return e;
+                    }),
+                    e
+                );
+            }
+            function ln(e) {
+                return Object(a.jsxs)(On, {
                     children: [
-                        Object(a.jsx)(On, { children: "\u041f\u043e\u0438\u0441\u043a:" }),
-                        Object(a.jsx)(hn, {
+                        Object(a.jsx)(hn, { children: "\u041f\u043e\u0438\u0441\u043a:" }),
+                        Object(a.jsx)(xn, {
                             onChange: function (n) {
                                 return e.handleChangeSearch(n.target.value);
                             },
@@ -791,24 +794,13 @@
                     ],
                 });
             }
-            var ln = we.b.div(fn()),
-                On = we.b.div(jn(), function (e) {
+            var On = Se.b.div(pn()),
+                hn = Se.b.div(fn(), function (e) {
                     return e.theme.color_main;
                 }),
-                hn = Object(we.b)(sn)(bn());
-            function xn() {
-                var e = Object(ye.a)(["\n    line-height: 2em;\n"]);
-                return (
-                    (xn = function () {
-                        return e;
-                    }),
-                    e
-                );
-            }
+                xn = Object(Se.b)(dn)(jn());
             function vn() {
-                var e = Object(ye.a)([
-                    "\n    flex-basis: 50%;\n    padding-right: 5px;\n    font-weight: 600;\n    color: #a0b0b9;\n    line-height: 2em;\n",
-                ]);
+                var e = Object(we.a)(["\n    line-height: 2em;\n"]);
                 return (
                     (vn = function () {
                         return e;
@@ -817,7 +809,9 @@
                 );
             }
             function mn() {
-                var e = Object(ye.a)(["\n    display: flex;\n    width: 100%;\n"]);
+                var e = Object(we.a)([
+                    "\n    flex-basis: 50%;\n    padding-right: 5px;\n    font-weight: 600;\n    color: #a0b0b9;\n    line-height: 2em;\n",
+                ]);
                 return (
                     (mn = function () {
                         return e;
@@ -826,7 +820,7 @@
                 );
             }
             function gn() {
-                var e = Object(ye.a)([""]);
+                var e = Object(we.a)(["\n    display: flex;\n    width: 100%;\n"]);
                 return (
                     (gn = function () {
                         return e;
@@ -834,23 +828,32 @@
                     e
                 );
             }
-            function yn(e) {
+            function yn() {
+                var e = Object(we.a)([""]);
+                return (
+                    (yn = function () {
+                        return e;
+                    }),
+                    e
+                );
+            }
+            function wn(e) {
                 var n = function (n) {
                     return e.libraryParameters.find(function (e) {
                         return e.key === n;
                     });
                 };
-                return Object(a.jsx)(wn, {
+                return Object(a.jsx)(Sn, {
                     children: Object.entries(e.productParameters).map(function (e) {
                         var t, r;
                         return Object(a.jsxs)(
-                            Sn,
+                            Pn,
                             {
                                 children: [
-                                    Object(a.jsx)(Pn, {
+                                    Object(a.jsx)(_n, {
                                         children: (null === (t = n(e[0])) || void 0 === t ? void 0 : t.name) + ":",
                                     }),
-                                    Object(a.jsxs)(_n, {
+                                    Object(a.jsxs)(An, {
                                         children: [
                                             e[1],
                                             " ",
@@ -864,22 +867,13 @@
                     }),
                 });
             }
-            var wn = we.b.div(gn()),
-                Sn = we.b.div(mn()),
-                Pn = we.b.div(vn()),
-                _n = we.b.div(xn()),
-                An = t(69);
-            function kn() {
-                var e = Object(ye.a)(["\n    flex-basis: 40%;\n"]);
-                return (
-                    (kn = function () {
-                        return e;
-                    }),
-                    e
-                );
-            }
+            var Sn = Se.b.div(yn()),
+                Pn = Se.b.div(gn()),
+                _n = Se.b.div(mn()),
+                An = Se.b.div(vn()),
+                kn = t(69);
             function En() {
-                var e = Object(ye.a)(["\n    color: #353535;\n    line-height: 1.5em;\n"]);
+                var e = Object(we.a)(["\n    flex-basis: 40%;\n"]);
                 return (
                     (En = function () {
                         return e;
@@ -888,7 +882,7 @@
                 );
             }
             function Tn() {
-                var e = Object(ye.a)([""]);
+                var e = Object(we.a)(["\n    color: #353535;\n    line-height: 1.5em;\n"]);
                 return (
                     (Tn = function () {
                         return e;
@@ -897,7 +891,7 @@
                 );
             }
             function Dn() {
-                var e = Object(ye.a)(["\n    flex-basis: 60%;\n    padding-right: 30px;\n"]);
+                var e = Object(we.a)([""]);
                 return (
                     (Dn = function () {
                         return e;
@@ -906,10 +900,7 @@
                 );
             }
             function Cn() {
-                var e = Object(ye.a)([
-                    "\n    display: flex;\n\n    @media (max-width: ",
-                    "px) {\n        flex-direction: column-reverse;\n    }\n",
-                ]);
+                var e = Object(we.a)(["\n    flex-basis: 60%;\n    padding-right: 30px;\n"]);
                 return (
                     (Cn = function () {
                         return e;
@@ -918,7 +909,10 @@
                 );
             }
             function Rn() {
-                var e = Object(ye.a)(["\n    padding-right: 3px;\n"]);
+                var e = Object(we.a)([
+                    "\n    display: flex;\n\n    @media (max-width: ",
+                    "px) {\n        flex-direction: column-reverse;\n    }\n",
+                ]);
                 return (
                     (Rn = function () {
                         return e;
@@ -927,7 +921,7 @@
                 );
             }
             function Un() {
-                var e = Object(ye.a)([""]);
+                var e = Object(we.a)(["\n    padding-right: 3px;\n"]);
                 return (
                     (Un = function () {
                         return e;
@@ -936,7 +930,7 @@
                 );
             }
             function Ln() {
-                var e = Object(ye.a)([""]);
+                var e = Object(we.a)([""]);
                 return (
                     (Ln = function () {
                         return e;
@@ -945,9 +939,7 @@
                 );
             }
             function zn() {
-                var e = Object(ye.a)([
-                    "\n    margin: 20px 0;\n    padding: 20px;\n    background: #ffffff;\n    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n    border-radius: 5px;\n",
-                ]);
+                var e = Object(we.a)([""]);
                 return (
                     (zn = function () {
                         return e;
@@ -955,40 +947,51 @@
                     e
                 );
             }
-            function Gn(e) {
-                var n = _e(Re);
-                return Object(a.jsxs)(Nn, {
+            function Gn() {
+                var e = Object(we.a)([
+                    "\n    margin: 20px 0;\n    padding: 20px;\n    background: #ffffff;\n    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n    border-radius: 5px;\n",
+                ]);
+                return (
+                    (Gn = function () {
+                        return e;
+                    }),
+                    e
+                );
+            }
+            function Nn(e) {
+                var n = Ae(Ue);
+                return Object(a.jsxs)(Fn, {
                     children: [
-                        Object(a.jsx)(Fn, {
-                            children: Object(a.jsxs)(nn, {
+                        Object(a.jsx)(In, {
+                            children: Object(a.jsxs)(tn, {
                                 children: [
-                                    Object(a.jsx)(In, { children: e.product.name }),
-                                    Object(a.jsxs)(an, {
+                                    Object(a.jsx)(qn, { children: e.product.name }),
+                                    Object(a.jsxs)(on, {
                                         to: "/products/" + e.product.id,
                                         children: [
-                                            Object(a.jsx)(qn, { size: "16" }),
+                                            Object(a.jsx)(Jn, { size: "16" }),
                                             "\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0442\u043e\u0432\u0430\u0440",
                                         ],
                                     }),
                                 ],
                             }),
                         }),
-                        Object(a.jsxs)(Jn, {
+                        Object(a.jsxs)(Mn, {
                             children: [
-                                Object(a.jsxs)(Mn, {
+                                Object(a.jsxs)(Wn, {
                                     children: [
-                                        Object(a.jsx)(Wn, {
+                                        Object(a.jsx)(Hn, {
                                             children: "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
                                         }),
-                                        Object(a.jsx)(Hn, { children: e.product.description }),
+                                        Object(a.jsx)(Bn, { children: e.product.description }),
                                     ],
                                 }),
-                                Object(a.jsxs)(Bn, {
+                                Object(a.jsxs)(Vn, {
                                     children: [
-                                        Object(a.jsx)(Wn, {
+                                        Object(a.jsx)(Hn, {
                                             children: "\u041f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b",
                                         }),
-                                        Object(a.jsx)(yn, {
+                                        Object(a.jsx)(wn, {
                                             productParameters: e.product.parameters,
                                             libraryParameters: n,
                                         }),
@@ -999,68 +1002,68 @@
                     ],
                 });
             }
-            var Nn = we.b.div(zn()),
-                Fn = we.b.div(Ln()),
-                In = Object(we.b)($e)(Un()),
-                qn = Object(we.b)(An.a)(Rn()),
-                Jn = we.b.div(Cn(), function (e) {
+            var Fn = Se.b.div(Gn()),
+                In = Se.b.div(zn()),
+                qn = Object(Se.b)(Ye)(Ln()),
+                Jn = Object(Se.b)(kn.a)(Un()),
+                Mn = Se.b.div(Rn(), function (e) {
                     return e.theme.media_tablet;
                 }),
-                Mn = we.b.div(Dn()),
-                Wn = Object(we.b)(Qe)(Tn()),
-                Hn = we.b.article(En()),
-                Bn = we.b.div(kn());
-            function Vn() {
-                var e = Object(ye.a)([
+                Wn = Se.b.div(Cn()),
+                Hn = Object(Se.b)(Ze)(Dn()),
+                Bn = Se.b.article(Tn()),
+                Vn = Se.b.div(En());
+            function Xn() {
+                var e = Object(we.a)([
                     "\n    max-width: 935px;\n    margin: 0 auto;\n    font-size: 16px;\n    background-color: #fafafa;\n",
                 ]);
                 return (
-                    (Vn = function () {
+                    (Xn = function () {
                         return e;
                     }),
                     e
                 );
             }
-            function Xn(e) {
-                return Object(a.jsx)($n, {
+            function $n(e) {
+                return Object(a.jsx)(Yn, {
                     children: e.products.valueSeq().map(function (e) {
-                        return Object(a.jsx)(Gn, { product: e }, e.id);
+                        return Object(a.jsx)(Nn, { product: e }, e.id);
                     }),
                 });
             }
-            var $n = we.b.div(Vn()),
-                Yn = t(38);
-            function Kn() {
-                var e = Object(ye.a)([""]);
+            var Yn = Se.b.div(Xn()),
+                Kn = t(39);
+            function Qn() {
+                var e = Object(we.a)([""]);
                 return (
-                    (Kn = function () {
+                    (Qn = function () {
                         return e;
                     }),
                     e
                 );
             }
-            function Qn() {
-                var e = Pe(),
-                    n = _e(Te),
-                    t = _e(De),
-                    c = _e(ze);
+            function Zn() {
+                var e = _e(),
+                    n = Ae(De),
+                    t = Ae(Ce),
+                    c = Ae(Ge);
                 return t !== r.loaded
                     ? Object(a.jsxs)(a.Fragment, {
                           children: [
-                              t === r.notLoaded && Object(a.jsx)(Be, {}),
+                              t === r.notLoaded && Object(a.jsx)(Ve, {}),
                               t === r.errorServer &&
-                                  Object(a.jsx)(Je, {
+                                  Object(a.jsx)(Me, {
                                       type: "warning",
                                       text:
                                           "\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430",
                                   }),
                           ],
                       })
-                    : Object(a.jsxs)(Zn, {
+                    : Object(a.jsxs)(et, {
                           children: [
-                              n === r.notLoaded && Object(a.jsx)(Ve, {}),
+                              n === r.notLoaded && Object(a.jsx)(Xe, {}),
                               n === r.errorServer &&
-                                  Object(a.jsx)(Je, {
+                                  Object(a.jsx)(Me, {
                                       type: "warning",
                                       text:
                                           "\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430",
@@ -1068,22 +1071,22 @@
                               n === r.loaded &&
                                   Object(a.jsxs)(a.Fragment, {
                                       children: [
-                                          Object(a.jsxs)(nn, {
+                                          Object(a.jsxs)(tn, {
                                               children: [
-                                                  Object(a.jsx)($e, {
+                                                  Object(a.jsx)(Ye, {
                                                       children:
                                                           "\u0421\u043f\u0438\u0441\u043e\u043a \u0442\u043e\u0432\u0430\u0440\u043e\u0432",
                                                   }),
-                                                  Object(a.jsxs)(an, {
+                                                  Object(a.jsxs)(on, {
                                                       to: "/products/create",
                                                       children: [
-                                                          Object(a.jsx)(Yn.a, { size: "20" }),
+                                                          Object(a.jsx)(Kn.a, { size: "20" }),
                                                           "\u0421\u043e\u0437\u0434\u0430\u0442\u044c \u0442\u043e\u0432\u0430\u0440",
                                                       ],
                                                   }),
                                               ],
                                           }),
-                                          Object(a.jsx)(pn, {
+                                          Object(a.jsx)(ln, {
                                               handleChangeSearch: function (n) {
                                                   e(
                                                       (function (e) {
@@ -1093,8 +1096,8 @@
                                               },
                                           }),
                                           c.size > 0
-                                              ? Object(a.jsx)(Xn, { products: c })
-                                              : Object(a.jsx)(Qe, {
+                                              ? Object(a.jsx)($n, { products: c })
+                                              : Object(a.jsx)(Ze, {
                                                     children:
                                                         "\u0422\u043e\u0432\u0430\u0440 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d",
                                                 }),
@@ -1103,73 +1106,73 @@
                           ],
                       });
             }
-            var Zn = we.b.div(Kn());
-            function et(e) {
-                var n = Pe();
+            var et = Se.b.div(Qn());
+            function nt(e) {
+                var n = _e();
                 return (
                     Object(i.useEffect)(function () {
                         var t;
                         n(((t = e.idProduct), { type: R, id: t }));
                     }, []),
-                    Object(a.jsx)(Je, { type: "preload", text: "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430..." })
+                    Object(a.jsx)(Me, { type: "preload", text: "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430..." })
                 );
             }
-            var nt = t(30),
-                tt = t(46);
-            function rt() {
-                var e = Object(ye.a)([
+            var tt = t(31),
+                rt = t(46);
+            function ct() {
+                var e = Object(we.a)([
                     "\n    display: block;\n    width: 100%;\n    border: 1px solid #9abbce;\n    border-radius: 2px;\n    line-height: 1.5em;\n    padding: 1em;\n    box-sizing: border-box;\n\n    &:hover,\n    &:focus {\n        border: 1px solid ",
                     ";\n    }\n",
                 ]);
                 return (
-                    (rt = function () {
+                    (ct = function () {
                         return e;
                     }),
                     e
                 );
             }
-            var ct = we.b.textarea(rt(), function (e) {
+            var at = Se.b.textarea(ct(), function (e) {
                 return e.theme.color_main;
             });
-            function at() {
-                var e = Object(ye.a)([
+            function it() {
+                var e = Object(we.a)([
                     "\n    display: block;\n    width: 100%;\n    border: 1px solid #9abbce;\n    border-radius: 2px;\n    line-height: 3em;\n    height: 3em;\n    padding: 0 1em;\n    box-sizing: border-box;\n\n    &:hover,\n    &:focus {\n        border: 1px solid ",
                     ";\n    }\n",
                 ]);
                 return (
-                    (at = function () {
+                    (it = function () {
                         return e;
                     }),
                     e
                 );
             }
-            function it(e) {
+            function ot(e) {
                 return Object(a.jsx)(
-                    ot,
-                    Object(pe.a)(Object(pe.a)({}, e), {}, { ref: e.innerRef, children: e.children })
+                    ut,
+                    Object(le.a)(Object(le.a)({}, e), {}, { ref: e.innerRef, children: e.children })
                 );
             }
-            var ot = we.b.select(at(), function (e) {
+            var ut = Se.b.select(it(), function (e) {
                 return e.theme.color_main;
             });
-            function ut() {
-                var e = Object(ye.a)([
+            function st() {
+                var e = Object(we.a)([
                     "\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    background-color: ",
                     ";\n    border: 1px solid ",
                     ";\n    border-radius: 2px;\n    color: #fff;\n    height: 3em;\n    padding: 0 1em;\n    cursor: pointer;\n\n    &:hover {\n        background-color: #359eef;\n    }\n",
                 ]);
                 return (
-                    (ut = function () {
+                    (st = function () {
                         return e;
                     }),
                     e
                 );
             }
-            function st(e) {
-                return Object(a.jsx)(dt, Object(pe.a)(Object(pe.a)({}, e), {}, { children: e.children }));
+            function dt(e) {
+                return Object(a.jsx)(bt, Object(le.a)(Object(le.a)({}, e), {}, { children: e.children }));
             }
-            var dt = we.b.button(
-                    ut(),
+            var bt = Se.b.button(
+                    st(),
                     function (e) {
                         return e.theme.color_main;
                     },
@@ -1177,23 +1180,14 @@
                         return e.theme.color_main;
                     }
                 ),
-                bt = t(70),
-                jt = t(71),
-                ft = t(72),
-                pt = t(73);
-            function lt() {
-                var e = Object(ye.a)([
+                jt = t(70),
+                ft = t(71),
+                pt = t(72),
+                lt = t(73);
+            function Ot() {
+                var e = Object(we.a)([
                     "\n    animation: rotate 2s linear infinite;\n\n    @keyframes rotate {\n        100% {\n            transform: rotate(360deg);\n        }\n    }\n",
                 ]);
-                return (
-                    (lt = function () {
-                        return e;
-                    }),
-                    e
-                );
-            }
-            function Ot() {
-                var e = Object(ye.a)([""]);
                 return (
                     (Ot = function () {
                         return e;
@@ -1202,7 +1196,7 @@
                 );
             }
             function ht() {
-                var e = Object(ye.a)([""]);
+                var e = Object(we.a)([""]);
                 return (
                     (ht = function () {
                         return e;
@@ -1211,7 +1205,7 @@
                 );
             }
             function xt() {
-                var e = Object(ye.a)(["\n    @media (max-width: ", "px) {\n        display: none;\n    }\n"]);
+                var e = Object(we.a)([""]);
                 return (
                     (xt = function () {
                         return e;
@@ -1220,7 +1214,7 @@
                 );
             }
             function vt() {
-                var e = Object(ye.a)(["\n    @media (max-width: ", "px) {\n        display: none;\n    }\n"]);
+                var e = Object(we.a)(["\n    @media (max-width: ", "px) {\n        display: none;\n    }\n"]);
                 return (
                     (vt = function () {
                         return e;
@@ -1229,10 +1223,7 @@
                 );
             }
             function mt() {
-                var e = Object(ye.a)([
-                    "\n    background-color: #c41732;\n    border: 1px solid #ac0020;\n\n    &:hover {\n        background-color: #d22540;\n    }\n\n    @media (max-width: ",
-                    "px) {\n        width: 30px;\n    }\n",
-                ]);
+                var e = Object(we.a)(["\n    @media (max-width: ", "px) {\n        display: none;\n    }\n"]);
                 return (
                     (mt = function () {
                         return e;
@@ -1241,9 +1232,9 @@
                 );
             }
             function gt() {
-                var e = Object(ye.a)([
-                    "\n    flex-basis: 14%;\n\n    @media (max-width: ",
-                    "px) {\n        flex-basis: 18%;\n    }\n",
+                var e = Object(we.a)([
+                    "\n    background-color: #c41732;\n    border: 1px solid #ac0020;\n\n    &:hover {\n        background-color: #d22540;\n    }\n\n    @media (max-width: ",
+                    "px) {\n        width: 30px;\n    }\n",
                 ]);
                 return (
                     (gt = function () {
@@ -1253,9 +1244,9 @@
                 );
             }
             function yt() {
-                var e = Object(ye.a)([
-                    "\n    flex-basis: 48%;\n    @media (max-width: ",
-                    "px) {\n        flex-basis: 78%;\n    }\n",
+                var e = Object(we.a)([
+                    "\n    flex-basis: 14%;\n\n    @media (max-width: ",
+                    "px) {\n        flex-basis: 18%;\n    }\n",
                 ]);
                 return (
                     (yt = function () {
@@ -1265,9 +1256,9 @@
                 );
             }
             function wt() {
-                var e = Object(ye.a)([
-                    "\n    flex-basis: 14%;\n    white-space: nowrap;\n    min-width: 150px;\n\n    @media (max-width: ",
-                    "px) {\n        flex-basis: 100%;\n    }\n",
+                var e = Object(we.a)([
+                    "\n    flex-basis: 48%;\n    @media (max-width: ",
+                    "px) {\n        flex-basis: 78%;\n    }\n",
                 ]);
                 return (
                     (wt = function () {
@@ -1277,8 +1268,9 @@
                 );
             }
             function St() {
-                var e = Object(ye.a)([
-                    "\n    display: flex;\n    padding-bottom: 5px;\n    flex-wrap: wrap;\n    width: 100%;\n    justify-content: space-between;\n",
+                var e = Object(we.a)([
+                    "\n    flex-basis: 14%;\n    white-space: nowrap;\n    min-width: 150px;\n\n    @media (max-width: ",
+                    "px) {\n        flex-basis: 100%;\n    }\n",
                 ]);
                 return (
                     (St = function () {
@@ -1288,7 +1280,9 @@
                 );
             }
             function Pt() {
-                var e = Object(ye.a)([""]);
+                var e = Object(we.a)([
+                    "\n    display: flex;\n    padding-bottom: 5px;\n    flex-wrap: wrap;\n    width: 100%;\n    justify-content: space-between;\n",
+                ]);
                 return (
                     (Pt = function () {
                         return e;
@@ -1297,7 +1291,7 @@
                 );
             }
             function _t() {
-                var e = Object(ye.a)(["\n    height: 200px;\n"]);
+                var e = Object(we.a)([""]);
                 return (
                     (_t = function () {
                         return e;
@@ -1306,7 +1300,7 @@
                 );
             }
             function At() {
-                var e = Object(ye.a)([""]);
+                var e = Object(we.a)(["\n    height: 200px;\n"]);
                 return (
                     (At = function () {
                         return e;
@@ -1315,7 +1309,7 @@
                 );
             }
             function kt() {
-                var e = Object(ye.a)(["\n    padding-bottom: 5px;\n"]);
+                var e = Object(we.a)([""]);
                 return (
                     (kt = function () {
                         return e;
@@ -1324,9 +1318,7 @@
                 );
             }
             function Et() {
-                var e = Object(ye.a)([
-                    "\n    padding-right: 5px;\n    font-weight: 600;\n    color: #a0b0b9;\n    line-height: 3em;\n",
-                ]);
+                var e = Object(we.a)(["\n    padding-bottom: 5px;\n"]);
                 return (
                     (Et = function () {
                         return e;
@@ -1335,7 +1327,9 @@
                 );
             }
             function Tt() {
-                var e = Object(ye.a)(["\n    padding-bottom: 10px;\n"]);
+                var e = Object(we.a)([
+                    "\n    padding-right: 5px;\n    font-weight: 600;\n    color: #a0b0b9;\n    line-height: 3em;\n",
+                ]);
                 return (
                     (Tt = function () {
                         return e;
@@ -1343,19 +1337,28 @@
                     e
                 );
             }
-            function Dt(e) {
-                var n = Pe(),
-                    t = _e(Re),
+            function Dt() {
+                var e = Object(we.a)(["\n    padding-bottom: 10px;\n"]);
+                return (
+                    (Dt = function () {
+                        return e;
+                    }),
+                    e
+                );
+            }
+            function Ct(e) {
+                var n = _e(),
+                    t = Ae(Ue),
                     r = Object(i.useState)(e.product),
-                    o = Object(tt.a)(r, 2),
+                    o = Object(rt.a)(r, 2),
                     u = o[0],
                     s = o[1],
                     d = Object(i.useState)(!0),
-                    b = Object(tt.a)(d, 2),
+                    b = Object(rt.a)(d, 2),
                     j = b[0],
                     f = b[1],
                     p = Object(i.useRef)(null),
-                    l = _e(Ce),
+                    l = Ae(Re),
                     O = t.filter(function (e) {
                         return !(e.key in u.parameters);
                     }),
@@ -1364,35 +1367,35 @@
                     };
                 return Object(a.jsxs)(a.Fragment, {
                     children: [
-                        Object(a.jsxs)(nn, {
+                        Object(a.jsxs)(tn, {
                             children: [
-                                Object(a.jsx)($e, {
+                                Object(a.jsx)(Ye, {
                                     children:
                                         "create" === e.typeForm
                                             ? "\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u0442\u043e\u0432\u0430\u0440\u0430"
                                             : "\u0420\u0435\u0434\u0430\u043a\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0442\u043e\u0432\u0430\u0440\u0430",
                                 }),
-                                Object(a.jsxs)(an, {
+                                Object(a.jsxs)(on, {
                                     to: "/products",
                                     children: [
-                                        Object(a.jsx)(bt.a, { size: "20" }),
+                                        Object(a.jsx)(jt.a, { size: "20" }),
                                         "\u041a \u0441\u043f\u0438\u0441\u043a\u0443 \u0442\u043e\u0432\u0430\u0440\u043e\u0432",
                                     ],
                                 }),
                             ],
                         }),
-                        Object(a.jsxs)(Ct, {
+                        Object(a.jsxs)(Rt, {
                             children: [
-                                Object(a.jsx)(Qe, {
+                                Object(a.jsx)(Ze, {
                                     children:
                                         "\u0421\u0442\u0430\u0442\u0438\u0447\u043d\u044b\u0435 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b",
                                 }),
-                                Object(a.jsxs)(Ut, {
+                                Object(a.jsxs)(Lt, {
                                     children: [
-                                        Object(a.jsx)(Rt, {
+                                        Object(a.jsx)(Ut, {
                                             children: "\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435:",
                                         }),
-                                        Object(a.jsx)(Lt, {
+                                        Object(a.jsx)(zt, {
                                             value: u.name,
                                             onChange: function (e) {
                                                 return h("name", e.target.value);
@@ -1400,12 +1403,12 @@
                                         }),
                                     ],
                                 }),
-                                Object(a.jsxs)(Ut, {
+                                Object(a.jsxs)(Lt, {
                                     children: [
-                                        Object(a.jsx)(Rt, {
+                                        Object(a.jsx)(Ut, {
                                             children: "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435:",
                                         }),
-                                        Object(a.jsx)(zt, {
+                                        Object(a.jsx)(Gt, {
                                             value: u.description,
                                             onChange: function (e) {
                                                 return h("description", e.target.value);
@@ -1415,21 +1418,21 @@
                                 }),
                             ],
                         }),
-                        Object(a.jsxs)(Ct, {
+                        Object(a.jsxs)(Rt, {
                             children: [
-                                Object(a.jsx)(Qe, {
+                                Object(a.jsx)(Ze, {
                                     children:
                                         "\u0414\u0438\u043d\u0430\u043c\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b",
                                 }),
-                                Object(a.jsxs)(Gt, {
+                                Object(a.jsxs)(Nt, {
                                     children: [
                                         Object.entries(u.parameters).map(function (e) {
                                             var n, r;
                                             return Object(a.jsxs)(
-                                                Nt,
+                                                Ft,
                                                 {
                                                     children: [
-                                                        Object(a.jsx)(Ft, {
+                                                        Object(a.jsx)(It, {
                                                             children:
                                                                 (null ===
                                                                     ((r = e[0]),
@@ -1439,8 +1442,8 @@
                                                                     ? void 0
                                                                     : n.name) + ":",
                                                         }),
-                                                        Object(a.jsx)(It, {
-                                                            children: Object(a.jsx)(sn, {
+                                                        Object(a.jsx)(qt, {
+                                                            children: Object(a.jsx)(dn, {
                                                                 value: e[1],
                                                                 onChange: function (n) {
                                                                     return (function (e, n) {
@@ -1448,10 +1451,10 @@
                                                                             s(
                                                                                 u.set(
                                                                                     "parameters",
-                                                                                    Object(pe.a)(
-                                                                                        Object(pe.a)({}, u.parameters),
+                                                                                    Object(le.a)(
+                                                                                        Object(le.a)({}, u.parameters),
                                                                                         {},
-                                                                                        Object(nt.a)({}, e, n)
+                                                                                        Object(tt.a)({}, e, n)
                                                                                     )
                                                                                 )
                                                                             );
@@ -1459,7 +1462,7 @@
                                                                 },
                                                             }),
                                                         }),
-                                                        Object(a.jsxs)(Jt, {
+                                                        Object(a.jsxs)(Mt, {
                                                             onClick: function () {
                                                                 return (function (e) {
                                                                     f(!0),
@@ -1467,14 +1470,14 @@
                                                                         s(
                                                                             u.set(
                                                                                 "parameters",
-                                                                                Object(pe.a)({}, u.parameters)
+                                                                                Object(le.a)({}, u.parameters)
                                                                             )
                                                                         );
                                                                 })(e[0]);
                                                             },
                                                             children: [
-                                                                Object(a.jsx)(jt.a, { size: "20" }),
-                                                                Object(a.jsx)(Mt, {
+                                                                Object(a.jsx)(ft.a, { size: "20" }),
+                                                                Object(a.jsx)(Wt, {
                                                                     children:
                                                                         "\u0423\u0434\u0430\u043b\u0438\u0442\u044c",
                                                                 }),
@@ -1486,14 +1489,14 @@
                                             );
                                         }),
                                         O.size > 0 &&
-                                            Object(a.jsxs)(Nt, {
+                                            Object(a.jsxs)(Ft, {
                                                 children: [
-                                                    Object(a.jsx)(Ft, {
+                                                    Object(a.jsx)(It, {
                                                         children:
                                                             "\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440:",
                                                     }),
-                                                    Object(a.jsx)(It, {
-                                                        children: Object(a.jsx)(it, {
+                                                    Object(a.jsx)(qt, {
+                                                        children: Object(a.jsx)(ot, {
                                                             innerRef: p,
                                                             children: O.valueSeq().map(function (e) {
                                                                 return Object(a.jsx)(
@@ -1504,24 +1507,24 @@
                                                             }),
                                                         }),
                                                     }),
-                                                    Object(a.jsxs)(Ht, {
+                                                    Object(a.jsxs)(Bt, {
                                                         onClick: function () {
                                                             p.current &&
                                                                 (f(!0),
                                                                 s(
                                                                     u.set(
                                                                         "parameters",
-                                                                        Object(pe.a)(
-                                                                            Object(pe.a)({}, u.parameters),
+                                                                        Object(le.a)(
+                                                                            Object(le.a)({}, u.parameters),
                                                                             {},
-                                                                            Object(nt.a)({}, p.current.value, "")
+                                                                            Object(tt.a)({}, p.current.value, "")
                                                                         )
                                                                     )
                                                                 ));
                                                         },
                                                         children: [
-                                                            Object(a.jsx)(Yn.a, { size: "20" }),
-                                                            Object(a.jsx)(Wt, {
+                                                            Object(a.jsx)(Kn.a, { size: "20" }),
+                                                            Object(a.jsx)(Ht, {
                                                                 children:
                                                                     "\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c",
                                                             }),
@@ -1533,8 +1536,8 @@
                                 }),
                             ],
                         }),
-                        Object(a.jsx)(Ct, {
-                            children: Object(a.jsxs)(Bt, {
+                        Object(a.jsx)(Rt, {
+                            children: Object(a.jsxs)(Vt, {
                                 onClick: function () {
                                     n(V(c.save)),
                                         f(!1),
@@ -1549,9 +1552,9 @@
                                         );
                                 },
                                 children: [
-                                    (l === c.notSaved || j) && Object(a.jsx)(ft.a, { size: "20" }),
-                                    l === c.save && !j && Object(a.jsx)(Vt, { size: "20" }),
-                                    l === c.saved && !j && Object(a.jsx)(pt.a, { size: "20" }),
+                                    (l === c.notSaved || j) && Object(a.jsx)(pt.a, { size: "20" }),
+                                    l === c.save && !j && Object(a.jsx)(Xt, { size: "20" }),
+                                    l === c.saved && !j && Object(a.jsx)(lt.a, { size: "20" }),
                                     l === c.errorServer &&
                                         !j &&
                                         "\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430! \u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c ",
@@ -1564,138 +1567,138 @@
                     ],
                 });
             }
-            var Ct = we.b.div(Tt()),
-                Rt = we.b.div(Et()),
-                Ut = we.b.div(kt()),
-                Lt = Object(we.b)(sn)(At()),
-                zt = Object(we.b)(function (e) {
-                    return Object(a.jsx)(ct, Object(pe.a)({}, e));
-                })(_t()),
-                Gt = we.b.div(Pt()),
-                Nt = we.b.div(St()),
-                Ft = Object(we.b)(Rt)(wt(), function (e) {
+            var Rt = Se.b.div(Dt()),
+                Ut = Se.b.div(Tt()),
+                Lt = Se.b.div(Et()),
+                zt = Object(Se.b)(dn)(kt()),
+                Gt = Object(Se.b)(function (e) {
+                    return Object(a.jsx)(at, Object(le.a)({}, e));
+                })(At()),
+                Nt = Se.b.div(_t()),
+                Ft = Se.b.div(Pt()),
+                It = Object(Se.b)(Ut)(St(), function (e) {
                     return e.theme.media_mobile;
                 }),
-                It = we.b.div(yt(), function (e) {
+                qt = Se.b.div(wt(), function (e) {
                     return e.theme.media_mobile;
                 }),
-                qt = Object(we.b)(st)(gt(), function (e) {
+                Jt = Object(Se.b)(dt)(yt(), function (e) {
                     return e.theme.media_mobile;
                 }),
-                Jt = Object(we.b)(qt)(mt(), function (e) {
+                Mt = Object(Se.b)(Jt)(gt(), function (e) {
                     return e.theme.media_tablet;
                 }),
-                Mt = we.b.span(vt(), function (e) {
+                Wt = Se.b.span(mt(), function (e) {
                     return e.theme.media_tablet;
                 }),
-                Wt = we.b.span(xt(), function (e) {
+                Ht = Se.b.span(vt(), function (e) {
                     return e.theme.media_tablet;
                 }),
-                Ht = Object(we.b)(qt)(ht()),
-                Bt = Object(we.b)(st)(Ot()),
-                Vt = Object(we.b)(Ne.a)(lt());
-            function Xt() {
-                var e = Object(ye.a)([""]);
+                Bt = Object(Se.b)(Jt)(xt()),
+                Vt = Object(Se.b)(dt)(ht()),
+                Xt = Object(Se.b)(Fe.a)(Ot());
+            function $t() {
+                var e = Object(we.a)([""]);
                 return (
-                    (Xt = function () {
+                    ($t = function () {
                         return e;
                     }),
                     e
                 );
             }
-            function $t() {
-                var e = _e(De),
-                    n = _e(Ee),
-                    t = Object(Se.g)().idProduct,
-                    c = _e(Le, t);
+            function Yt() {
+                var e = Ae(Ce),
+                    n = Ae(Te),
+                    t = Object(Pe.g)().idProduct,
+                    c = Ae(ze, t);
                 return e !== r.loaded
                     ? Object(a.jsxs)(a.Fragment, {
                           children: [
-                              e === r.notLoaded && Object(a.jsx)(Be, {}),
+                              e === r.notLoaded && Object(a.jsx)(Ve, {}),
                               e === r.errorServer &&
-                                  Object(a.jsx)(Je, {
+                                  Object(a.jsx)(Me, {
                                       type: "warning",
                                       text:
                                           "\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430",
                                   }),
                           ],
                       })
-                    : Object(a.jsxs)(Yt, {
+                    : Object(a.jsxs)(Kt, {
                           children: [
-                              !c && n !== r.errorServer && Object(a.jsx)(et, { idProduct: t }),
+                              !c && n !== r.errorServer && Object(a.jsx)(nt, { idProduct: t }),
                               n === r.errorServer &&
-                                  Object(a.jsx)(Je, {
+                                  Object(a.jsx)(Me, {
                                       type: "warning",
                                       text:
                                           "\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430",
                                   }),
-                              c && Object(a.jsx)(Dt, { product: c, typeForm: "edit" }),
+                              c && Object(a.jsx)(Ct, { product: c, typeForm: "edit" }),
                           ],
                       });
             }
-            var Yt = we.b.div(Xt());
-            function Kt() {
-                var e = new ve(),
-                    n = _e(De);
+            var Kt = Se.b.div($t());
+            function Qt() {
+                var e = new me(),
+                    n = Ae(Ce);
                 return n !== r.loaded
                     ? Object(a.jsxs)(a.Fragment, {
                           children: [
-                              n === r.notLoaded && Object(a.jsx)(Be, {}),
+                              n === r.notLoaded && Object(a.jsx)(Ve, {}),
                               n === r.errorServer &&
-                                  Object(a.jsx)(Je, {
+                                  Object(a.jsx)(Me, {
                                       type: "warning",
                                       text:
                                           "\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430",
                                   }),
                           ],
                       })
-                    : Object(a.jsx)(Dt, { product: e, typeForm: "create" });
+                    : Object(a.jsx)(Ct, { product: e, typeForm: "create" });
             }
-            function Qt() {
-                var e = Object(ye.a)([
+            function Zt() {
+                var e = Object(we.a)([
                     "\n    max-width: 935px;\n    margin: 0 auto;\n    font-size: 16px;\n    background-color: #fafafa;\n    padding: 0 10px;\n",
                 ]);
                 return (
-                    (Qt = function () {
+                    (Zt = function () {
                         return e;
                     }),
                     e
                 );
             }
-            var Zt,
-                er = { media_tablet: 768, media_mobile: 414, color_main: "#2196f3", color_title: "#2196f3" },
-                nr = we.b.div(Qt()),
-                tr = function () {
-                    return Object(a.jsx)(we.a, {
-                        theme: er,
-                        children: Object(a.jsx)(nr, {
-                            children: Object(a.jsxs)(Se.d, {
+            var er,
+                nr = { media_tablet: 768, media_mobile: 414, color_main: "#2196f3", color_title: "#2196f3" },
+                tr = Se.b.div(Zt()),
+                rr = function () {
+                    return Object(a.jsx)(Se.a, {
+                        theme: nr,
+                        children: Object(a.jsx)(tr, {
+                            children: Object(a.jsxs)(Pe.d, {
                                 children: [
-                                    Object(a.jsx)(Se.b, {
+                                    Object(a.jsx)(Pe.b, {
                                         exact: !0,
                                         path: "/",
-                                        children: Object(a.jsx)(Se.a, { to: "/products" }),
+                                        children: Object(a.jsx)(Pe.a, { to: "/products" }),
                                     }),
-                                    Object(a.jsx)(Se.b, { exact: !0, path: "/products", component: Qn }),
-                                    Object(a.jsx)(Se.b, { exact: !0, path: "/products/create", component: Kt }),
-                                    Object(a.jsx)(Se.b, { exact: !0, path: "/products/:idProduct", component: $t }),
+                                    Object(a.jsx)(Pe.b, { exact: !0, path: "/products", component: Zn }),
+                                    Object(a.jsx)(Pe.b, { exact: !0, path: "/products/create", component: Qt }),
+                                    Object(a.jsx)(Pe.b, { exact: !0, path: "/products/:idProduct", component: Yt }),
                                 ],
                             }),
                         }),
                     });
                 },
-                rr = (t(107), t(108), Object(j.b)()),
-                cr = Object(l.a)(),
-                ar = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || d.d,
-                ir = Object(d.e)(F(rr), ar(Object(d.a)(cr, Object(f.a)(rr))));
-            cr.run(
-                ((Zt = ge),
+                cr = (t(107), t(108), Object(j.b)()),
+                ar = Object(l.a)(),
+                ir = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || d.d,
+                or = Object(d.e)(F(cr), ir(Object(d.a)(ar, Object(f.a)(cr))));
+            ar.run(
+                ((er = ye),
                 q.a.mark(function e() {
                     return q.a.wrap(function (e) {
                         for (;;)
                             switch ((e.prev = e.next)) {
                                 case 0:
-                                    return (e.next = 2), Object(J.a)([K(Zt), de(Zt)]);
+                                    return (e.next = 2), Object(J.a)([K(er), be(er)]);
                                 case 2:
                                 case "end":
                                     return e.stop();
@@ -1706,8 +1709,8 @@
                 s.a.render(
                     Object(a.jsx)(o.a.StrictMode, {
                         children: Object(a.jsx)(b.a, {
-                            store: ir,
-                            children: Object(a.jsx)(p.a, { history: rr, children: Object(a.jsx)(tr, {}) }),
+                            store: or,
+                            children: Object(a.jsx)(p.a, { history: cr, children: Object(a.jsx)(rr, {}) }),
                         }),
                     }),
                     document.getElementById("root")
@@ -1716,4 +1719,4 @@
     },
     [[109, 1, 2]],
 ]);
-//# sourceMappingURL=main.7406ce14.chunk.js.map
+//# sourceMappingURL=main.4ec38bdd.chunk.js.map
