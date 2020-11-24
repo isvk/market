@@ -47,7 +47,7 @@ export default function MainPage() {
             {statusProducts === loadStatus.loaded && (
                 <>
                     <TitlePanel>
-                        <TitleFirst>Список товары</TitleFirst>
+                        <TitleFirst>Список товаров</TitleFirst>
                         <LinkButton to="/products/create">
                             <PlusIcon size="20" />
                             Создать товар

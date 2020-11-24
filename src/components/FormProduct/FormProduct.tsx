@@ -81,7 +81,7 @@ export default function FormProduct(props: IProductFormProps) {
                 </LinkButton>
             </TitlePanel>
             <Panel>
-                <TitleSecond>Статиченые параметры</TitleSecond>
+                <TitleSecond>Статичные параметры</TitleSecond>
                 <StaticParameter>
                     <Label>Название:</Label>
                     <FieldName
