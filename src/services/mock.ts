@@ -1,7 +1,7 @@
 import MockAdapter from "axios-mock-adapter";
 
 export function mock(axios: any) {
-    let mock = new MockAdapter(axios);
+    let mock = new MockAdapter(axios, { delayResponse: 1000 });
 
     /* Products */
     const products = [
