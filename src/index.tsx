@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
-import { createBrowserHistory } from "history";
+import { createHashHistory } from "history";
 import { routerMiddleware, ConnectedRouter } from "connected-react-router";
 import createSagaMiddleware from "redux-saga";
 import rootReducer from "./store/rootReducer";
@@ -14,7 +14,7 @@ import App from "./App";
 import "reset-css";
 import "./index.css";
 
-export const history = createBrowserHistory({ basename: packageJson.homepage });
+export const history = createHashHistory({ basename: packageJson.homepage });
 const sagaMiddleware = createSagaMiddleware();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
