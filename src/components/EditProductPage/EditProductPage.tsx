@@ -5,9 +5,9 @@ import { useParams } from "react-router";
 import { mainGetStatusLoadingParameters, mainGetStatusLoadingProduct, productsGetById } from "src/store/rootSelector";
 import { loadStatus } from "src/store/loadStatus";
 import Alert from "src/components/Alert/Alert";
-import LoadParameters from "src/components/MainPage/LoadParameters";
-import FormProduct from "./FormProduct";
-import LoadProduct from "./LoadProduct";
+import LoadParameters from "src/components/Loading/LoadParameters";
+import LoadProduct from "src/components/Loading/LoadProduct";
+import FormProduct from "src/components/FormProduct/FormProduct";
 
 interface IParam {
     idProduct: string;

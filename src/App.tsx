@@ -2,8 +2,8 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { Switch, Route, Redirect } from "react-router-dom";
 import MainPage from "./components/MainPage/MainPage";
-import EditProductPage from "./components/ProductPage/EditProductPage";
-import CreateProductPage from "./components/ProductPage/CreateProductPage";
+import EditProductPage from "./components/EditProductPage/EditProductPage";
+import CreateProductPage from "./components/CreateProductPage/CreateProductPage";
 
 function App() {
     return (

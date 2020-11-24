@@ -8,15 +8,15 @@ import {
     productGetProductsFilterBySearchWord,
 } from "src/store/rootSelector";
 import { loadStatus } from "src/store/loadStatus";
-import Alert from "src/components/Alert/Alert";
-import LoadParameters from "./LoadParameters";
-import LoadProducts from "./LoadProducts";
-import ListProducts from "src/components/ListProducts/ListProducts";
-import FormSearch from "./FormSearch";
 import { updateSearchWord } from "src/store/main/actions";
+import Alert from "src/components/Alert/Alert";
+import LoadParameters from "src/components/Loading/LoadParameters";
+import LoadProducts from "src/components/Loading/LoadProducts";
 import TitleFirst from "src/components/UI/TitleFirst";
 import TitlePanel from "src/components/UI/TitlePanel";
 import LinkButton from "src/components/UI/LinkButton";
+import FormSearch from "src/components/FormSearch/FormSearch";
+import ListProducts from "src/components/ListProducts/ListProducts";
 import { Plus as PlusIcon } from "@styled-icons/boxicons-regular/Plus";
 
 export default function MainPage() {

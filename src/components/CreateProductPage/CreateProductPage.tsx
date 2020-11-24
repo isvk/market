@@ -4,8 +4,8 @@ import useCustomSelector from "src/hooks/useCustomSelector";
 import { mainGetStatusLoadingParameters } from "src/store/rootSelector";
 import { loadStatus } from "src/store/loadStatus";
 import Alert from "src/components/Alert/Alert";
-import LoadParameters from "src/components/MainPage/LoadParameters";
-import FormProduct from "./FormProduct";
+import LoadParameters from "src/components/Loading/LoadParameters";
+import FormProduct from "src/components/FormProduct/FormProduct";
 
 export default function CreateProductPage() {
     const product = new Product();
