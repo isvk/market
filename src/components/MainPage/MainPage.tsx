@@ -13,10 +13,12 @@ import Alert from "src/components/Alert/Alert";
 import LoadParameters from "src/components/Loading/LoadParameters";
 import LoadProducts from "src/components/Loading/LoadProducts";
 import TitleFirst from "src/components/UI/TitleFirst";
+import TitleSecond from "src/components/UI/TitleSecond";
 import TitlePanel from "src/components/UI/TitlePanel";
 import LinkButton from "src/components/UI/LinkButton";
 import FormSearch from "src/components/FormSearch/FormSearch";
 import ListProducts from "src/components/ListProducts/ListProducts";
+
 import { Plus as PlusIcon } from "@styled-icons/boxicons-regular/Plus";
 
 export default function MainPage() {
@@ -52,7 +54,11 @@ export default function MainPage() {
                         </LinkButton>
                     </TitlePanel>
                     <FormSearch handleChangeSearch={handleChangeSearch} />
-                    <ListProducts products={products} />
+                    {products.size > 0 ? (
+                        <ListProducts products={products} />
+                    ) : (
+                        <TitleSecond>Товар не найден</TitleSecond>
+                    )}
                 </>
             )}
         </Wrapper>
