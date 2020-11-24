@@ -13,7 +13,7 @@ const reducer = (state: TStoreProduct = Map(), action: ActionTypesInfer<typeof a
 
         case types.ADD_PRODUCTS:
             action.products.forEach((product: Product) => {
-                state = state.set(product.id, product);
+                if (!state.has(product.id)) state = state.set(product.id, product);
             });
             return state;
 
