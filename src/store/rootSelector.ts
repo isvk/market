@@ -5,8 +5,8 @@ import {
     getStatusLoadingProducts,
     getStatusLoadingParameters,
     getStatusSavingProduct,
-} from "./main/selectors";
-import { filterBySearchWord } from "../models/product";
+} from "src/store/main/selectors";
+import { filterBySearchWord } from "src/models/product";
 
 const propsFirstSelector = (_: IStore, prop: any) => prop;
 

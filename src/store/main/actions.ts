@@ -1,6 +1,6 @@
 import * as types from "./types";
 import { loadStatus } from "src/store/loadStatus";
-import { saveStatus } from "../saveStatus";
+import { saveStatus } from "src/store/saveStatus";
 
 export const updateStatusLoadingProduct = (status: loadStatus) =>
     ({

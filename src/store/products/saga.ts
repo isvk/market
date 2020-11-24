@@ -9,7 +9,7 @@ import {
     updateStatusSavingProduct,
 } from "src/store/main/actions";
 import { loadStatus } from "src/store/loadStatus";
-import { saveStatus } from "../saveStatus";
+import { saveStatus } from "src/store/saveStatus";
 import { push } from "connected-react-router";
 
 function* loadProductsAsync(services: typeof bottle) {
