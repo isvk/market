@@ -1,25 +1,44 @@
-# Getting Started with Create React App
+#Редактор статичных и динамических параметров товаров
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Демо](https://isvk.github.io/market/build/)
 
-## Available Scripts
+## Реализованный функционал
 
-In the project directory, you can run:
+* Создание и редактирование товаров со статичными и динамическими параметрами("ключ/значение").
+* Текстовый поиск по всем параметрам с выводом карточек товаров.
+* Каждый URL проекта может быть точкой входа пользователя, осуществляется загрузка только нужных для этой страницы данных.
+
+Задание было выполнено за 32 часа.
+
+## Стек
+
+* React
+* Hooks
+* Redux
+* Saga
+* Reselect
+* Immutable.js
+* React Router
+* Styled-components
+* REST API
+* Axios
+* Axios-mock-adapter
+
+## Back-End
+
+Обращение к REST API замокано через axios-mock-adapter.
+
+---
+
+# Создано на основе Create React App
+
+## Установка
+
+### `yarn install`
+
+## Запуск
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Запускает приложение в режиме разработки. \
+Открыть [http://localhost:3000](http://localhost:3000) для просмотра в браузере.
