@@ -8,13 +8,12 @@ import createSagaMiddleware from "redux-saga";
 import rootReducer from "./store/rootReducer";
 import rootSaga from "./store/rootSaga";
 import services from "./services";
-import * as packageJson from "../package.json";
 import App from "./App";
 
 import "reset-css";
 import "./index.css";
 
-export const history = createHashHistory({ basename: packageJson.homepage });
+export const history = createHashHistory();
 const sagaMiddleware = createSagaMiddleware();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
