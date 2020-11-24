@@ -2,16 +2,21 @@ import bottle from "src/services";
 import { call, put, takeEvery } from "@redux-saga/core/effects";
 import * as types from "./types";
 import {
-    loadProducts,
-    loadProductById,
     createProduct,
     createProductSuccess,
+    loadProductById,
+    loadProducts,
     updateProduct,
     updateProductSuccess,
 } from "./actions";
 import { addProducts } from "src/store/products/actions";
-import { updateStatusLoadingProduct, updateStatusLoadingProducts } from "src/store/main/actions";
+import {
+    updateStatusLoadingProduct,
+    updateStatusLoadingProducts,
+    updateStatusSavingProduct,
+} from "src/store/main/actions";
 import { loadStatus } from "src/store/loadStatus";
+import { saveStatus } from "../saveStatus";
 
 function* loadProductsAsync(services: typeof bottle, action: ReturnType<typeof loadProducts>) {
     try {
@@ -28,8 +33,10 @@ function* createProductAsync(services: typeof bottle, action: ReturnType<typeof 
     try {
         let product = yield call(services.container.ApiProduct.create, action.product);
         yield put(createProductSuccess(product));
+        yield put(updateStatusSavingProduct(saveStatus.saved));
     } catch (e) {
         console.error(e);
+        yield put(updateStatusSavingProduct(saveStatus.errorServer));
     }
 }
 
@@ -48,8 +55,10 @@ function* updateProductAsync(services: typeof bottle, action: ReturnType<typeof 
     try {
         let product = yield call(services.container.ApiProduct.update, action.id, action.product);
         yield put(updateProductSuccess(product));
+        yield put(updateStatusSavingProduct(saveStatus.saved));
     } catch (e) {
         console.error(e);
+        yield put(updateStatusSavingProduct(saveStatus.errorServer));
     }
 }
 

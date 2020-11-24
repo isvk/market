@@ -3,7 +3,7 @@ import styled from "styled-components";
 import useCustomDispatch from "src/hooks/useCustomDispatch";
 import useCustomSelector from "src/hooks/useCustomSelector";
 import { createProduct, updateProduct } from "src/store/products/actions";
-import { parameterState } from "src/store/rootSelector";
+import { mainGetStatusSavingProduct, parameterState } from "src/store/rootSelector";
 import ProductModel from "src/models/product";
 import TitleSecond from "src/components/UI/TitleSecond";
 import TitleFirst from "src/components/UI/TitleFirst";
@@ -17,6 +17,11 @@ import { ListUl as ListIcon } from "@styled-icons/boxicons-regular/ListUl";
 import { Trash as TrashIcon } from "@styled-icons/boxicons-regular/Trash";
 import { Plus as PlusIcon } from "@styled-icons/boxicons-regular/Plus";
 import { IThemeProps } from "../../App";
+import { updateStatusSavingProduct } from "../../store/main/actions";
+import { saveStatus } from "../../store/saveStatus";
+import { CloudUpload as NoSavedIcon } from "@styled-icons/boxicons-regular/CloudUpload";
+import { Loader5 as SavedIcon } from "@styled-icons/remix-fill/Loader5";
+import { Check as SaveIcon } from "@styled-icons/boxicons-regular/Check";
 
 interface IProductFormProps {
     product: ProductModel;
@@ -27,7 +32,9 @@ export default function FormProduct(props: IProductFormProps) {
     const dispatch = useCustomDispatch();
     const libraryParameters = useCustomSelector(parameterState);
     const [product, setProduct] = useState(props.product);
+    const [isProductNotSaved, setIsProductNotSaved] = useState(true);
     const refSelectAddParameter = useRef<HTMLSelectElement>(null);
+    const saveStatusProduct = useCustomSelector(mainGetStatusSavingProduct);
 
     const availableParameters = libraryParameters.filter(
         (libraryParameter) => !(libraryParameter.key in product.parameters)
@@ -36,22 +43,34 @@ export default function FormProduct(props: IProductFormProps) {
     const dictionaryGetByKey = (key: string) =>
         libraryParameters.find((libraryParameter) => libraryParameter.key === key);
 
-    const handleChangeValueParameter = (key: string, value: string) => {
+    const handleChangeValueStaticParameter = (key: "name" | "description", value: string) => {
+        setIsProductNotSaved(true);
+        setProduct(product.set(key, value));
+    };
+
+    const handleChangeValueDynamicParameter = (key: string, value: string) => {
+        setIsProductNotSaved(true);
         setProduct(product.set("parameters", { ...product.parameters, [key]: value }));
     };
 
     const handleAddParameter = () => {
-        if (refSelectAddParameter.current)
+        if (refSelectAddParameter.current) {
+            setIsProductNotSaved(true);
             setProduct(product.set("parameters", { ...product.parameters, [refSelectAddParameter.current.value]: "" }));
+        }
     };
 
     const handleDeleteParameter = (key: string) => {
+        setIsProductNotSaved(true);
         Reflect.deleteProperty(product.parameters, key);
         setProduct(product.set("parameters", { ...product.parameters }));
     };
 
-    const handleSave = () =>
+    const handleSave = () => {
+        dispatch(updateStatusSavingProduct(saveStatus.save));
+        setIsProductNotSaved(false);
         dispatch(props.typeForm === "create" ? createProduct(product) : updateProduct(product.id, product));
+    };
 
     return (
         <>
@@ -65,13 +84,16 @@ export default function FormProduct(props: IProductFormProps) {
                 <TitleSecond>Статиченые параметры</TitleSecond>
                 <StaticParameter>
                     <Label>Название:</Label>
-                    <FieldName value={product.name} onChange={(e) => setProduct(product.set("name", e.target.value))} />
+                    <FieldName
+                        value={product.name}
+                        onChange={(e) => handleChangeValueStaticParameter("name", e.target.value)}
+                    />
                 </StaticParameter>
                 <StaticParameter>
                     <Label>Описание:</Label>
                     <FieldDescription
                         value={product.description}
-                        onChange={(e) => setProduct(product.set("description", e.target.value))}
+                        onChange={(e) => handleChangeValueStaticParameter("description", e.target.value)}
                     />
                 </StaticParameter>
             </Panel>
@@ -84,7 +106,7 @@ export default function FormProduct(props: IProductFormProps) {
                             <WrapperFieldParameter>
                                 <FieldInput
                                     value={keyValue[1]}
-                                    onChange={(e) => handleChangeValueParameter(keyValue[0], e.target.value)}
+                                    onChange={(e) => handleChangeValueDynamicParameter(keyValue[0], e.target.value)}
                                 />
                             </WrapperFieldParameter>
                             <ButtonDeleteParameter onClick={() => handleDeleteParameter(keyValue[0])}>
@@ -116,6 +138,12 @@ export default function FormProduct(props: IProductFormProps) {
             </Panel>
             <Panel>
                 <ButtonSaveProduct onClick={handleSave}>
+                    {(saveStatusProduct === saveStatus.notSaved || isProductNotSaved) && <NoSavedIcon size="20" />}
+                    {saveStatusProduct === saveStatus.save && !isProductNotSaved && <LoaderIcon size="20" />}
+                    {saveStatusProduct === saveStatus.saved && !isProductNotSaved && <SaveIcon size="20" />}
+                    {saveStatusProduct === saveStatus.errorServer &&
+                        !isProductNotSaved &&
+                        "Ошибка сервера! Не удалось "}
                     {props.typeForm === "create" ? "Создать товар" : "Сохранить товар"}
                 </ButtonSaveProduct>
             </Panel>
@@ -207,3 +235,13 @@ const TextButtonAddParameter = styled.span`
 const ButtonAddParameter = styled(ButtonParameter)``;
 
 const ButtonSaveProduct = styled(Button)``;
+
+const LoaderIcon = styled(SavedIcon)`
+    animation: rotate 2s linear infinite;
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+`;

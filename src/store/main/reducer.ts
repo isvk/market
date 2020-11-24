@@ -16,6 +16,9 @@ const reducer = (state: TStoreMain = new Main(), action: ActionTypesInfer<typeof
         case types.UPDATE_STATUS_LOADING_PARAMETERS:
             return state.set("statusLoadingParameters", action.status);
 
+        case types.UPDATE_STATUS_SAVING_PRODUCT:
+            return state.set("statusSavingProduct", action.status);
+
         case types.UPDATE_SEARCH_WORD:
             return state.set("searchWord", action.searchWord.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&"));
 

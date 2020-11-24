@@ -1,6 +1,11 @@
 import { createSelector } from "reselect";
 import { IStore } from "src/store/rootReducer";
-import { getStatusLoadingProduct, getStatusLoadingProducts, getStatusLoadingParameters } from "./main/selectors";
+import {
+    getStatusLoadingProduct,
+    getStatusLoadingProducts,
+    getStatusLoadingParameters,
+    getStatusSavingProduct,
+} from "./main/selectors";
 import { filterBySearchWord } from "../models/product";
 
 const propsFirstSelector = (_: IStore, prop: any) => prop;
@@ -9,6 +14,7 @@ export const mainState = (state: Readonly<IStore>) => state.main;
 export const mainGetStatusLoadingProduct = createSelector(mainState, getStatusLoadingProduct);
 export const mainGetStatusLoadingProducts = createSelector(mainState, getStatusLoadingProducts);
 export const mainGetStatusLoadingParameters = createSelector(mainState, getStatusLoadingParameters);
+export const mainGetStatusSavingProduct = createSelector(mainState, getStatusSavingProduct);
 
 export const parameterState = (state: Readonly<IStore>) => state.parameters;
 
